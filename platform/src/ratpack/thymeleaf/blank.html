@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title data-react-helmet="true">NoiseModelling GeoClimate computation platform</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png"/>
+    <link rel="stylesheet" href="/css/pure-min.css"/>
+    <link rel="stylesheet" href="/css/platform.css"/>
+</head>
+<body>
+<div id="layout">
+    <div th:replace="menu :: menu"></div>
+    <div id="main" class="content">
+        <div class="header"><h1>Notification</h1>
+            <div class="l-box" id="message_div" th:if="${not #strings.isEmpty(message)}">
+                <aside><p th:text="${message}"></p></aside>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

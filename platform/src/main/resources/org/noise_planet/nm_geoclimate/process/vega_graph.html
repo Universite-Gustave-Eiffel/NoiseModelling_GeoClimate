@@ -1,0 +1,33 @@
+
+<div id="vis${graphID}"></div>
+<script>
+      var vlSpec${graphID} = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+        "width": 1170,
+        data: {
+          values: [
+            ${data}
+          ]
+        },
+         "layer": [{
+                "mark": {
+          "type": "line"
+        },
+        "encoding": {
+          "x": {"field": "x", "type": "quantitative", "axis": {"title": "distance (m)"}},
+          "y": {"field": "y", "type": "quantitative","scale": {"zero": false}, "axis": {"title": "height (m)"}}
+        }},{
+        "mark": {"type": "point"},
+        "encoding": {
+          "x": {"field": "x", "type": "quantitative", "axis": {"title": "distance (m)"}},
+          "y": {"field": "z", "type": "quantitative","scale": {"zero": false}, "axis": {"title": "height (m)"}}
+          ,
+        "shape": {"field": "type", "type": "nominal"},
+        "color": {"field": "type", "type": "nominal"}
+        }
+        }]
+      };
+
+      // Embed the visualization in the container with id `vis`
+      vegaEmbed('#vis${graphID}', vlSpec${graphID});
+  </script>

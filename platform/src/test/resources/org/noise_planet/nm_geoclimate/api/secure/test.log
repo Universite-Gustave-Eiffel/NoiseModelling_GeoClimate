@@ -1,0 +1,72 @@
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.processor.attr.StandardTextAttrProcessor  - [THYMELEAF][ratpack-compute-1-1][joblist] Processing attribute "th:text" with value "${job.conf_id}" in element "td"
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{expression}${job.conf_id}".
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.VariableExpression  - [THYMELEAF][ratpack-compute-1-1] Evaluating variable expression: "${job.conf_id}"
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.OgnlVariableExpressionEvaluator  - [THYMELEAF][ratpack-compute-1-1] OGNL expression: evaluating expression "job.conf_id" on target
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{ognl}job.conf_id".
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.processor.attr.StandardTextAttrProcessor  - [THYMELEAF][ratpack-compute-1-1][joblist] Processing attribute "th:text" with value "${job.pk_job}" in element "td"
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{expression}${job.pk_job}".
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.VariableExpression  - [THYMELEAF][ratpack-compute-1-1] Evaluating variable expression: "${job.pk_job}"
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.OgnlVariableExpressionEvaluator  - [THYMELEAF][ratpack-compute-1-1] OGNL expression: evaluating expression "job.pk_job" on target
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{ognl}job.pk_job".
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.processor.attr.StandardTextAttrProcessor  - [THYMELEAF][ratpack-compute-1-1][joblist] Processing attribute "th:text" with value "${job.startDate}" in element "td"
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{expression}${job.startDate}".
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.VariableExpression  - [THYMELEAF][ratpack-compute-1-1] Evaluating variable expression: "${job.startDate}"
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.OgnlVariableExpressionEvaluator  - [THYMELEAF][ratpack-compute-1-1] OGNL expression: evaluating expression "job.startDate" on target
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{ognl}job.startDate".
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.processor.attr.StandardTextAttrProcessor  - [THYMELEAF][ratpack-compute-1-1][joblist] Processing attribute "th:text" with value "${job.endDate}" in element "td"
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{expression}${job.endDate}".
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.VariableExpression  - [THYMELEAF][ratpack-compute-1-1] Evaluating variable expression: "${job.endDate}"
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.OgnlVariableExpressionEvaluator  - [THYMELEAF][ratpack-compute-1-1] OGNL expression: evaluating expression "job.endDate" on target
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{ognl}job.endDate".
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.processor.attr.StandardTextAttrProcessor  - [THYMELEAF][ratpack-compute-1-1][joblist] Processing attribute "th:text" with value "${job.status}" in element "td"
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{expression}${job.status}".
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.VariableExpression  - [THYMELEAF][ratpack-compute-1-1] Evaluating variable expression: "${job.status}"
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.OgnlVariableExpressionEvaluator  - [THYMELEAF][ratpack-compute-1-1] OGNL expression: evaluating expression "job.status" on target
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{ognl}job.status".
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.processor.attr.StandardTextAttrProcessor  - [THYMELEAF][ratpack-compute-1-1][joblist] Processing attribute "th:text" with value "${job.inseeDepartment}" in element "td"
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{expression}${job.inseeDepartment}".
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.VariableExpression  - [THYMELEAF][ratpack-compute-1-1] Evaluating variable expression: "${job.inseeDepartment}"
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.OgnlVariableExpressionEvaluator  - [THYMELEAF][ratpack-compute-1-1] OGNL expression: evaluating expression "job.inseeDepartment" on target
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{ognl}job.inseeDepartment".
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.processor.attr.StandardTextAttrProcessor  - [THYMELEAF][ratpack-compute-1-1][joblist] Processing attribute "th:text" with value "${job.conf_id}" in element "td"
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{expression}${job.conf_id}".
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.VariableExpression  - [THYMELEAF][ratpack-compute-1-1] Evaluating variable expression: "${job.conf_id}"
+[ratpack-compute-1-1] TRACE org.thymeleaf.standard.expression.OgnlVariableExpressionEvaluator  - [THYMELEAF][ratpack-compute-1-1] OGNL expression: evaluating expression "job.conf_id" on target
+[ratpack-compute-1-1] TRACE org.thymeleaf.TemplateEngine.cache.EXPRESSION_CACHE  - [THYMELEAF][ratpack-compute-1-1][EXPRESSION_CACHE][CACHE_HIT] Cache hit in cache "EXPRESSION_CACHE" for key "{ognl}job.conf_id".
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - This computation area contains 4750 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - This computation area contains 4750 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - Compute... 55.360 % (4759 receivers in this cell)
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - Begin processing of cell 347 / 625
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - This computation area contains 4759 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - This computation area contains 4759 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - Compute... 55.520 % (4735 receivers in this cell)
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - Begin processing of cell 348 / 625
+[HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool  - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - This computation area contains 4735 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - This computation area contains 4735 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - Compute... 55.680 % (4743 receivers in this cell)
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - Begin processing of cell 349 / 625
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - This computation area contains 4743 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - This computation area contains 4743 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - Compute... 55.840 % (4758 receivers in this cell)
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - Begin processing of cell 350 / 625
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - This computation area contains 4758 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - This computation area contains 4758 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - Compute... 56.000 % (3905 receivers in this cell)
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - Begin processing of cell 351 / 625
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - This computation area contains 3905 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - This computation area contains 3905 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - Compute... 56.160 % (4755 receivers in this cell)
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - Begin processing of cell 352 / 625
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - This computation area contains 4755 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - This computation area contains 4755 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - Compute... 56.320 % (4757 receivers in this cell)
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - Begin processing of cell 353 / 625
+[HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool  - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - This computation area contains 4757 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - This computation area contains 4757 receivers 0 sound sources and 0 buildings
+[JOB_4] INFO  org.noise_planet.noisemodelling  - Compute... 56.480 % (4728 receivers in this cell)
+[JOB_4] INFO  org.noise_planet.noisemodelling.jdbc.PointNoiseMap  - Begin processing of cell 354 / 625
+[ratpack-compute-1-1] DEBUG org.thymeleaf.TemplateEngine  - [THYMELEAF][ratpack-compute-1-1] Finished process on template "joblist" using mode "XHTML"
+[ratpack-compute-1-1] DEBUG org.thymeleaf.TemplateEngine  - [THYMELEAF][ratpack-compute-1-1] FINISHED PROCESS AND OUTPUT OF TEMPLATE "joblist" WITH LOCALE en
+[ratpack-compute-1-1] DEBUG org.thymeleaf.TemplateEngine.TIMER  - [THYMELEAF][ratpack-compute-1-1][joblist][en][39636037][40] TEMPLATE "joblist" WITH LOCALE en PROCESSED IN 39636037 nanoseconds (approx. 40ms)

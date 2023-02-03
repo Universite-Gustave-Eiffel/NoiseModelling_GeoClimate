@@ -1,0 +1,96 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'maven-publish'
+    id "io.ratpack.ratpack-java" version "1.5.0"
+}
+
+apply plugin: 'maven'
+
+group = 'org.noise_planet'
+version = '0.1.0'
+sourceCompatibility = 11
+
+compileJava {
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+}
+
+// Decomment to try compile external groovy script
+sourceSets {
+    main {
+        groovy {
+            srcDirs=['../script_groovy']
+        }
+    }
+}
+
+test{
+    maxHeapSize = "12g"
+}
+
+tasks.withType(JavaExec) {
+    jvmArgs += '--illegal-access=permit'
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo1.maven.org/maven2/' }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    maven { url 'https://oss.sonatype.org/content/repositories/releases/' }
+    maven {
+        url "https://repo.osgeo.org/repository/release/"
+    }
+    maven {
+        url "https://download.osgeo.org/webdav/geotools/"
+    }
+    maven {
+        url "https://maven.geo-solutions.it/"
+    }
+    maven {
+        url "https://repo.matsim.org/repository/matsim/"
+    }
+    mavenLocal()
+}
+
+dependencies {
+    implementation ratpack.dependency('guice')
+    implementation ratpack.dependency('groovy')
+    implementation ratpack.dependency('hikari')
+    implementation ratpack.dependency('thymeleaf')
+
+    implementation(project(':computation_core')) {
+        exclude group: 'org.codehaus.groovy'
+        exclude group: 'org.slf4j'
+    }
+
+    implementation 'org.pac4j:ratpack-pac4j:2.0.0'
+    implementation 'org.pac4j:pac4j-oidc:2.2.1'
+    implementation group: 'org.osgi', name: 'org.osgi.service.jdbc', version: '1.0.0'
+
+    implementation group: 'net.postgis', name: 'postgis-jdbc-jtsparser', version: '2.3.0'
+    implementation group: 'org.apache.commons', name: 'commons-compress', version: '1.18'
+
+    implementation (group: 'org.orbisgis', name: 'noisemodelling-jdbc', version: '4.0.0-SNAPSHOT')
+    implementation (group: 'org.orbisgis', name: 'h2gis-utilities', version: '2.1.0-SNAPSHOT')
+    implementation (group: 'org.orbisgis', name: 'h2gis', version: '2.1.0-SNAPSHOT')
+    implementation group: 'org.orbisgis', name: 'postgis-jts', version: '2.1.0-SNAPSHOT'
+    implementation group: 'org.orbisgis', name: 'postgis-jts-osgi', version: '2.1.0-SNAPSHOT'
+    implementation group: 'org.apache.commons', name:'commons-text', version: '1.9'
+
+    implementation 'org.orbisgis.geoclimate:osm:0.0.2-SNAPSHOT'
+    implementation 'org.orbisgis.geoclimate:geoclimate:0.0.2-SNAPSHOT'
+
+    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.22'
+
+    implementation 'com.jcraft:jsch:0.1.55'
+
+}
+
+mainClassName = 'org.noise_planet.nm_geoclimate.Main'

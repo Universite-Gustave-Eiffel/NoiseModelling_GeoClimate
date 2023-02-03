@@ -1,0 +1,37 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<div th:fragment="menu" id="menu" class="pure-menu custom-restricted-width">
+    <img src="" th:src="${profile.pictureUrl}"/>
+    <span class="pure-menu-heading">Jobs</span>
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item">
+            <a href="/manage/job_list" class="pure-menu-link">Job list</a>
+        </li>
+        <li class="pure-menu-item">
+            <a href="/manage/add_job" class="pure-menu-link">Add a new job</a>
+        </li>
+        <li class="pure-menu-item">
+            <a href="/manage/generate_report" class="pure-menu-link">Generate debug report</a>
+        </li>
+    </ul>
+    <span class="pure-menu-heading">Admin</span>
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item">
+            <a href="/manage/users" class="pure-menu-link">Manage users</a>
+        </li>
+    </ul>
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item">
+            <a href="/logout" class="pure-menu-link">Logout</a>
+        </li>
+    </ul>
+</div>
+
+</body>
+
+</html>

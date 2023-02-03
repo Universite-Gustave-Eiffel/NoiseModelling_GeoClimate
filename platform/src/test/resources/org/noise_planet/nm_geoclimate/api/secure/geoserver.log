@@ -1,0 +1,631 @@
+2021-08-03 16:54:43,266 INFO [geoserver.security] - Start reloading user/groups for service named default
+2021-08-03 16:54:43,271 INFO [geoserver.security] - Reloading user/groups successful for service named default
+2021-08-03 16:54:43,397 INFO [web.DefaultSecurityFilterChain] - Creating filter chain: org.geoserver.security.GeoServerRequestMatcher@1f6865ca, [org.geoserver.security.filter.GeoServerSecurityContextPersistenceFilter@6044311a, org.geoserver.security.filter.GeoServerRememberMeAuthenticationFilter@7416b560, org.geoserver.security.filter.GeoServerUserNamePasswordAuthenticationFilter@53d782b0, org.geoserver.security.filter.GeoServerAnonymousAuthenticationFilter@f4deb35, org.geoserver.security.filter.GeoServerExceptionTranslationFilter@4ec0c727, org.geoserver.security.filter.GeoServerSecurityInterceptorFilter@fbcc62a]
+2021-08-03 16:54:43,399 INFO [web.DefaultSecurityFilterChain] - Creating filter chain: org.geoserver.security.GeoServerRequestMatcher@49f2994f, [org.geoserver.security.filter.GeoServerSecurityContextPersistenceFilter@63dd81ee, org.geoserver.security.filter.GeoServerUserNamePasswordAuthenticationFilter@9353d68]
+2021-08-03 16:54:43,404 INFO [web.DefaultSecurityFilterChain] - Creating filter chain: org.geoserver.security.GeoServerRequestMatcher@5ae68d0e, [org.geoserver.security.filter.GeoServerSecurityContextPersistenceFilter@252d690, org.geoserver.security.filter.GeoServerLogoutFilter@614427b2]
+2021-08-03 16:54:43,417 INFO [web.DefaultSecurityFilterChain] - Creating filter chain: org.geoserver.security.GeoServerRequestMatcher@74c3374f, [org.geoserver.security.filter.GeoServerSecurityContextPersistenceFilter@3eea7c4b, org.geoserver.security.filter.GeoServerBasicAuthenticationFilter@50d507ab, org.geoserver.security.filter.GeoServerAnonymousAuthenticationFilter@460222eb, org.geoserver.security.filter.GeoServerExceptionTranslationFilter@2b960c2b, org.geoserver.security.filter.GeoServerSecurityInterceptorFilter@46f32536]
+2021-08-03 16:54:43,420 INFO [web.DefaultSecurityFilterChain] - Creating filter chain: org.geoserver.security.GeoServerRequestMatcher@59e6fb8a, [org.geoserver.security.filter.GeoServerSecurityContextPersistenceFilter@502cd238, org.geoserver.security.filter.GeoServerBasicAuthenticationFilter@68032a80, org.geoserver.security.filter.GeoServerExceptionTranslationFilter@6878cd83, org.geoserver.security.filter.GeoServerSecurityInterceptorFilter@62c41ad]
+2021-08-03 16:54:43,423 INFO [web.DefaultSecurityFilterChain] - Creating filter chain: org.geoserver.security.GeoServerRequestMatcher@4127dcdb, [org.geoserver.security.filter.GeoServerSecurityContextPersistenceFilter@6e8627e6, org.geoserver.security.filter.GeoServerBasicAuthenticationFilter@36bf903c, org.geoserver.security.filter.GeoServerAnonymousAuthenticationFilter@2a073f4f, org.geoserver.security.filter.GeoServerExceptionTranslationFilter@55b9ffd0, org.geoserver.security.filter.GeoServerSecurityInterceptorFilter@a5f5b96]
+2021-08-03 16:54:43,429 INFO [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+2021-08-03 16:54:43,430 INFO [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+2021-08-03 16:54:47,346 INFO [servlet.DispatcherServlet] - Initializing Servlet 'dispatcher'
+2021-08-03 16:54:47,412 INFO [servlet.DispatcherServlet] - Completed initialization in 65 ms
+2021-08-03 16:54:47,553 TRACE [ows.OWSHandlerMapping] - Mapped to HandlerExecutionChain with [org.geoserver.ows.Dispatcher@65105a83] and 1 interceptors
+2021-08-03 16:54:47,583 DEBUG [geoserver.requests] - First 4 bytes of XML doc are : 3C ('<') 70 ('p') 30 ('0') 3A (':')
+2021-08-03 16:54:47,583 DEBUG [geoserver.requests] - Charset detection phase 1. Inferred encoding: UTF-8
+2021-08-03 16:54:47,583 DEBUG [geoserver.requests] - Invalid(?) XML declaration: <p0:Ex.
+2021-08-03 16:54:47,583 DEBUG [geoserver.requests] - Charset detection phase 2. Charset in XML declaration is `null`.
+2021-08-03 16:54:47,583 DEBUG [geoserver.requests] - Trying to create reader basing on existing charset information: `UTF-8`.
+2021-08-03 16:54:47,583 DEBUG [geoserver.ows] - Raw XML request: <p0:Execute xmlns:p0="http://www.opengis.net/wps/1.0.0" service="WPS" version="1.0.0"><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">Database_Manager:Display_Database</p1:Identifier><p0:DataInputs><p0:Input><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">showColumns</p1:Identifier><p0:Data><p0:LiteralData>true</p0:LiteralData></p0:Data></p0:Input></p0:DataInputs><p0:ResponseForm><p0:RawDataOutput><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">result</p1:Identifier></p0:RawDataOutput></p0:ResponseForm></p0:Execute>\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00
+2021-08-03 16:54:47,593 INFO [geoserver.wps] - 
+Request: getServiceInfo
+2021-08-03 16:54:47,828 DEBUG [xsd.impl] - No schemaLocation found, using 'http://www.opengis.net/wps/1.0.0 jar:file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-xsd-wps-21.1.jar!/org/geotools/wps/wpsAll.xsd
+2021-08-03 16:54:47,836 DEBUG [xsd.impl] - Found override for http://www.opengis.net/wps/1.0.0: jar:file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-xsd-wps-21.1.jar!/org/geotools/wps/wpsAll.xsd ==> jar:file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-xsd-wps-21.1.jar!/org/geotools/wps/wpsAll.xsd
+2021-08-03 16:54:47,836 DEBUG [geotools.xsd] - building schema for schema: http://www.opengis.net/wps/1.0.0
+2021-08-03 16:54:47,853 DEBUG [geotools.xsd] - Could not locate schema for: wpsDescribeProcess_request.xsd.
+2021-08-03 16:54:47,862 DEBUG [geotools.xsd] - Could not locate schema for: common/RequestBaseType.xsd.
+2021-08-03 16:54:47,879 DEBUG [geotools.xsd] - building schema for schema: http://www.opengis.net/ows/1.1
+2021-08-03 16:54:47,887 DEBUG [geotools.xsd] - Could not locate schema for: owsGetResourceByID.xsd.
+2021-08-03 16:54:47,890 DEBUG [geotools.xsd] - Could not locate schema for: owsDataIdentification.xsd.
+2021-08-03 16:54:47,896 DEBUG [geotools.xsd] - Could not locate schema for: owsCommon.xsd.
+2021-08-03 16:54:47,912 DEBUG [geotools.xsd] - building schema for schema: http://www.w3.org/1999/xlink
+2021-08-03 16:54:47,927 DEBUG [geotools.xsd] - Could not locate schema for: ows19115subset.xsd.
+2021-08-03 16:54:47,945 DEBUG [geotools.xsd] - building schema for schema: http://www.w3.org/XML/1998/namespace
+2021-08-03 16:54:47,958 DEBUG [geotools.xsd] - Could not locate schema for: owsGetCapabilities.xsd.
+2021-08-03 16:54:47,974 DEBUG [geotools.xsd] - Could not locate schema for: owsServiceIdentification.xsd.
+2021-08-03 16:54:47,981 DEBUG [geotools.xsd] - Could not locate schema for: owsDataIdentification.xsd.
+2021-08-03 16:54:47,984 DEBUG [geotools.xsd] - Could not locate schema for: owsServiceProvider.xsd.
+2021-08-03 16:54:47,989 DEBUG [geotools.xsd] - Could not locate schema for: ows19115subset.xsd.
+2021-08-03 16:54:47,996 DEBUG [geotools.xsd] - Could not locate schema for: owsOperationsMetadata.xsd.
+2021-08-03 16:54:48,002 DEBUG [geotools.xsd] - Could not locate schema for: owsCommon.xsd.
+2021-08-03 16:54:48,003 DEBUG [geotools.xsd] - Could not locate schema for: ows19115subset.xsd.
+2021-08-03 16:54:48,004 DEBUG [geotools.xsd] - Could not locate schema for: owsDomainType.xsd.
+2021-08-03 16:54:48,010 DEBUG [geotools.xsd] - Could not locate schema for: owsCommon.xsd.
+2021-08-03 16:54:48,029 DEBUG [geotools.xsd] - Could not locate schema for: owsExceptionReport.xsd.
+2021-08-03 16:54:48,033 DEBUG [geotools.xsd] - Could not resolve schema location: null to physical location.
+2021-08-03 16:54:48,034 DEBUG [geotools.xsd] - Could not locate schema for: owsDomainType.xsd.
+2021-08-03 16:54:48,037 DEBUG [geotools.xsd] - Could not locate schema for: owsContents.xsd.
+2021-08-03 16:54:48,041 DEBUG [geotools.xsd] - Could not locate schema for: owsDataIdentification.xsd.
+2021-08-03 16:54:48,046 DEBUG [geotools.xsd] - Could not locate schema for: owsInputOutputData.xsd.
+2021-08-03 16:54:48,049 DEBUG [geotools.xsd] - Could not locate schema for: owsManifest.xsd.
+2021-08-03 16:54:48,054 DEBUG [geotools.xsd] - Could not locate schema for: owsDataIdentification.xsd.
+2021-08-03 16:54:48,068 DEBUG [geotools.xsd] - Could not locate schema for: wpsDescribeProcess_response.xsd.
+2021-08-03 16:54:48,080 DEBUG [geotools.xsd] - Could not locate schema for: common/ResponseBaseType.xsd.
+2021-08-03 16:54:48,091 DEBUG [geotools.xsd] - Could not locate schema for: common/DescriptionType.xsd.
+2021-08-03 16:54:48,099 DEBUG [geotools.xsd] - Could not locate schema for: common/ProcessBriefType.xsd.
+2021-08-03 16:54:48,103 DEBUG [geotools.xsd] - Could not locate schema for: DescriptionType.xsd.
+2021-08-03 16:54:48,112 DEBUG [geotools.xsd] - Could not locate schema for: ProcessVersion.xsd.
+2021-08-03 16:54:48,115 DEBUG [geotools.xsd] - Could not locate schema for: WSDL.xsd.
+2021-08-03 16:54:48,127 DEBUG [geotools.xsd] - Could not locate schema for: wpsExecute_request.xsd.
+2021-08-03 16:54:48,139 DEBUG [geotools.xsd] - Could not locate schema for: common/RequestBaseType.xsd.
+2021-08-03 16:54:48,148 DEBUG [geotools.xsd] - Could not locate schema for: wpsExecute_response.xsd.
+2021-08-03 16:54:48,154 DEBUG [geotools.xsd] - Could not locate schema for: common/ResponseBaseType.xsd.
+2021-08-03 16:54:48,156 DEBUG [geotools.xsd] - Could not locate schema for: common/ProcessBriefType.xsd.
+2021-08-03 16:54:48,157 DEBUG [geotools.xsd] - Could not locate schema for: wpsExecute_request.xsd.
+2021-08-03 16:54:48,164 DEBUG [geotools.xsd] - Could not locate schema for: wpsGetCapabilities_request.xsd.
+2021-08-03 16:54:48,170 DEBUG [geotools.xsd] - Could not locate schema for: wpsGetCapabilities_response.xsd.
+2021-08-03 16:54:48,175 DEBUG [geotools.xsd] - Could not locate schema for: common/WSDL.xsd.
+2021-08-03 16:54:48,183 DEBUG [geotools.xsd] - Could not locate schema for: common/ProcessBriefType.xsd.
+2021-08-03 16:54:48,370 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,374 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,381 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,392 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,396 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,411 DEBUG [wps.resource] - Associating process with execution id: 73b9e148-56cb-449c-82d9-6d865b73afb3
+2021-08-03 16:54:48,412 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,415 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,446 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Database_Manager:Display_Database, executionId=73b9e148-56cb-449c-82d9-6d865b73afb3, asynchronous=false, phase=QUEUED, progress=0.0, userName=anonymous, creationTime=Tue Aug 03 16:54:48 CEST 2021, completionTime=null, lastUpdated=Tue Aug 03 16:54:48 CEST 2021, expirationDate=Tue Aug 03 16:54:48 CEST 2021, estimatedCompletion=null, nextPoll=Tue Aug 03 16:54:48 CEST 2021, task=null, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:54:48,446 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,449 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,456 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,458 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,478 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,483 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,486 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,494 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:48,500 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Database_Manager:Display_Database, executionId=73b9e148-56cb-449c-82d9-6d865b73afb3, asynchronous=false, phase=RUNNING, progress=0.0, userName=anonymous, creationTime=Tue Aug 03 16:54:48 CEST 2021, completionTime=null, lastUpdated=Tue Aug 03 16:54:48 CEST 2021, expirationDate=Tue Aug 03 16:54:48 CEST 2021, estimatedCompletion=null, nextPoll=Tue Aug 03 16:54:48 CEST 2021, task=null, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:54:48,904 DEBUG [data.ogr] - Error initializing GDAL/OGR library
+java.lang.UnsatisfiedLinkError: no gdaljni in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1860)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:871)
+	at java.lang.System.loadLibrary(System.java:1124)
+	at org.geotools.data.ogr.jni.JniOGRDataStoreFactory.doIsAvailable(JniOGRDataStoreFactory.java:15)
+	at org.geotools.data.ogr.OGRDataStoreFactory.isAvailable(OGRDataStoreFactory.java:161)
+	at org.geotools.data.ogr.OGRDataStoreFactory.isAvailable(OGRDataStoreFactory.java:150)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:174)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at org.geotools.data.DataAccessFinder.getAvailableDataStores(DataAccessFinder.java:199)
+	at org.geotools.data.DataStoreFinder.getAvailableDataStores(DataStoreFinder.java:94)
+	at org.geotools.data.DataAccessFinder.getAvailableDataStores(DataAccessFinder.java:187)
+	at org.vfny.geoserver.util.DataStoreUtils.getAvailableDataStoreFactories(DataStoreUtils.java:320)
+	at org.vfny.geoserver.util.DataStoreUtils.aquireFactory(DataStoreUtils.java:170)
+	at org.geoserver.catalog.ResourcePool.getDataStoreFactory(ResourcePool.java:475)
+	at org.geoserver.catalog.ResourcePool.getDataStore(ResourcePool.java:525)
+	at org.geoserver.catalog.impl.DataStoreInfoImpl.getDataStore(DataStoreInfoImpl.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.geoserver.catalog.impl.ModificationProxy.invoke(ModificationProxy.java:127)
+	at com.sun.proxy.$Proxy29.getDataStore(Unknown Source)
+	at org.geoserver.catalog.DataStoreInfo$getDataStore.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at org.noise_planet.noisemodelling.wps.Database_Manager.Script5.openGeoserverDataStoreConnection(Script5.groovy:60)
+	at org.noise_planet.noisemodelling.wps.Database_Manager.Script5.run(Script5.groovy:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at groovy.lang.MetaClassImpl.invokeMethodClosure(MetaClassImpl.java:1050)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1092)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.Closure.call(Closure.java:405)
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.callGlobal(GroovyScriptEngineImpl.java:394)
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.callGlobal(GroovyScriptEngineImpl.java:388)
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.invokeImpl(GroovyScriptEngineImpl.java:361)
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.invokeFunction(GroovyScriptEngineImpl.java:198)
+	at org.geoserver.script.ScriptHook.doInvoke(ScriptHook.java:73)
+	at org.geoserver.script.ScriptHook.invoke(ScriptHook.java:56)
+	at org.geoserver.script.wps.WpsHook.run(WpsHook.java:173)
+	at org.geoserver.script.groovy.GroovyWpsHook.run(GroovyWpsHook.java:39)
+	at org.geoserver.script.wps.ScriptProcess.execute(ScriptProcess.java:114)
+	at org.geoserver.wps.executor.ProcessStartupFilter$ProcessStartupWrapper.execute(ProcessStartupFilter.java:50)
+	at org.geoserver.wps.executor.DefaultProcessManager$ProcessCallable.call(DefaultProcessManager.java:227)
+	at org.geoserver.wps.executor.DefaultProcessManager$ProcessCallable.call(DefaultProcessManager.java:195)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2021-08-03 16:54:48,978 DEBUG [data.ogr] - Error initializing GDAL/OGR library
+java.lang.UnsatisfiedLinkError: no gdaljni in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1860)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:871)
+	at java.lang.System.loadLibrary(System.java:1124)
+	at org.geotools.data.ogr.jni.JniOGRDataStoreFactory.doIsAvailable(JniOGRDataStoreFactory.java:15)
+	at org.geotools.data.ogr.OGRDataStoreFactory.isAvailable(OGRDataStoreFactory.java:161)
+	at org.geotools.data.ogr.OGRDataStoreFactory.isAvailable(OGRDataStoreFactory.java:150)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:174)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at org.geotools.data.DataAccessFinder.getAvailableDataStores(DataAccessFinder.java:199)
+	at org.geotools.data.DataStoreFinder.getAvailableDataStores(DataStoreFinder.java:94)
+	at org.geotools.data.DataAccessFinder.getAvailableDataStores(DataAccessFinder.java:187)
+	at org.vfny.geoserver.util.DataStoreUtils.getAvailableDataStoreFactories(DataStoreUtils.java:320)
+	at org.vfny.geoserver.util.DataStoreUtils.aquireFactory(DataStoreUtils.java:142)
+	at org.vfny.geoserver.util.DataStoreUtils.getDataAccess(DataStoreUtils.java:75)
+	at org.geoserver.catalog.ResourcePool.getDataStore(ResourcePool.java:591)
+	at org.geoserver.catalog.impl.DataStoreInfoImpl.getDataStore(DataStoreInfoImpl.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.geoserver.catalog.impl.ModificationProxy.invoke(ModificationProxy.java:127)
+	at com.sun.proxy.$Proxy29.getDataStore(Unknown Source)
+	at org.geoserver.catalog.DataStoreInfo$getDataStore.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at org.noise_planet.noisemodelling.wps.Database_Manager.Script5.openGeoserverDataStoreConnection(Script5.groovy:60)
+	at org.noise_planet.noisemodelling.wps.Database_Manager.Script5.run(Script5.groovy:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at groovy.lang.MetaClassImpl.invokeMethodClosure(MetaClassImpl.java:1050)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1092)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.Closure.call(Closure.java:405)
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.callGlobal(GroovyScriptEngineImpl.java:394)
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.callGlobal(GroovyScriptEngineImpl.java:388)
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.invokeImpl(GroovyScriptEngineImpl.java:361)
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.invokeFunction(GroovyScriptEngineImpl.java:198)
+	at org.geoserver.script.ScriptHook.doInvoke(ScriptHook.java:73)
+	at org.geoserver.script.ScriptHook.invoke(ScriptHook.java:56)
+	at org.geoserver.script.wps.WpsHook.run(WpsHook.java:173)
+	at org.geoserver.script.groovy.GroovyWpsHook.run(GroovyWpsHook.java:39)
+	at org.geoserver.script.wps.ScriptProcess.execute(ScriptProcess.java:114)
+	at org.geoserver.wps.executor.ProcessStartupFilter$ProcessStartupWrapper.execute(ProcessStartupFilter.java:50)
+	at org.geoserver.wps.executor.DefaultProcessManager$ProcessCallable.call(DefaultProcessManager.java:227)
+	at org.geoserver.wps.executor.DefaultProcessManager$ProcessCallable.call(DefaultProcessManager.java:195)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2021-08-03 16:54:50,077 DEBUG [geotools.jdbc] - CLOSE CONNECTION
+2021-08-03 16:54:50,106 DEBUG [geotools.jdbc] - CREATE CONNECTION
+2021-08-03 16:54:50,191 DEBUG [geotools.jdbc] - CLOSE CONNECTION
+2021-08-03 16:54:50,298 INFO [noise_planet.noisemodelling] - Start : Display database
+2021-08-03 16:54:50,298 INFO [noise_planet.noisemodelling] - inputs {showColumns=true}
+2021-08-03 16:54:50,800 INFO [noise_planet.noisemodelling] - End : Display database
+2021-08-03 16:54:50,804 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Database_Manager:Display_Database, executionId=73b9e148-56cb-449c-82d9-6d865b73afb3, asynchronous=false, phase=RUNNING, progress=99.0, userName=anonymous, creationTime=Tue Aug 03 16:54:48 CEST 2021, completionTime=null, lastUpdated=Tue Aug 03 16:54:50 CEST 2021, expirationDate=Tue Aug 03 16:54:48 CEST 2021, estimatedCompletion=Tue Aug 03 16:55:47 CEST 2021, nextPoll=Tue Aug 03 16:54:48 CEST 2021, task=Execution completed, preparing to write response, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:54:50,813 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:50,818 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:50,822 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:50,826 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:50,843 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:50,847 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:54:50,865 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Database_Manager:Display_Database, executionId=73b9e148-56cb-449c-82d9-6d865b73afb3, asynchronous=false, phase=SUCCEEDED, progress=100.0, userName=anonymous, creationTime=Tue Aug 03 16:54:48 CEST 2021, completionTime=Tue Aug 03 16:54:50 CEST 2021, lastUpdated=Tue Aug 03 16:54:50 CEST 2021, expirationDate=Tue Aug 03 16:54:48 CEST 2021, estimatedCompletion=Tue Aug 03 16:55:47 CEST 2021, nextPoll=Tue Aug 03 16:54:48 CEST 2021, task=null, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:54:50,865 INFO [geoserver.wps] - 
+Request: execute
+    service = WPS
+    version = 1.0.0
+    baseUrl = http://localhost:9580/geoserver/
+    identifier:
+        value = Database_Manager:Display_Database
+    dataInputs:
+        input[0]:
+            identifier = net.opengis.ows11.impl.CodeTypeImpl@3058d286 (value: showColumns, codeSpace: null)
+            data = net.opengis.wps10.impl.DataTypeImpl@434d8447
+    responseForm:
+        rawDataOutput:
+            identifier = net.opengis.ows11.impl.CodeTypeImpl@6d897e98 (value: result, codeSpace: null)
+2021-08-03 16:54:50,927 DEBUG [geoserver.filters] - Compressing output for mimetype: text/plain
+2021-08-03 16:55:43,936 TRACE [ows.OWSHandlerMapping] - Mapped to HandlerExecutionChain with [org.geoserver.ows.Dispatcher@65105a83] and 1 interceptors
+2021-08-03 16:55:43,946 INFO [geoserver.wps] - 
+Request: getServiceInfo
+2021-08-03 16:55:43,958 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:55:43,965 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:55:43,968 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:55:43,973 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:55:43,985 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:55:43,990 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:55:44,007 INFO [geoserver.wps] - 
+Request: describeProcess
+    service = WPS
+    version = 1.0.0
+    baseUrl = http://localhost:9580/geoserver/
+    identifier[0]:
+        value = Import_and_Export:Export_Table
+2021-08-03 16:55:44,092 DEBUG [data.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2021-08-03 16:55:44,092 DEBUG [data.util] - InterpolationConverterFactory can be applied from Strings to Interpolation only.
+2021-08-03 16:55:44,095 DEBUG [data.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2021-08-03 16:55:44,095 DEBUG [data.util] - InterpolationConverterFactory can be applied from Strings to Interpolation only.
+2021-08-03 16:55:44,114 DEBUG [geoserver.filters] - Compressing output for mimetype: application/xml
+2021-08-03 16:56:17,770 TRACE [ows.OWSHandlerMapping] - Mapped to HandlerExecutionChain with [org.geoserver.ows.Dispatcher@65105a83] and 1 interceptors
+2021-08-03 16:56:17,771 DEBUG [geoserver.requests] - First 4 bytes of XML doc are : 3C ('<') 70 ('p') 30 ('0') 3A (':')
+2021-08-03 16:56:17,771 DEBUG [geoserver.requests] - Charset detection phase 1. Inferred encoding: UTF-8
+2021-08-03 16:56:17,771 DEBUG [geoserver.requests] - Invalid(?) XML declaration: <p0:Ex.
+2021-08-03 16:56:17,771 DEBUG [geoserver.requests] - Charset detection phase 2. Charset in XML declaration is `null`.
+2021-08-03 16:56:17,771 DEBUG [geoserver.requests] - Trying to create reader basing on existing charset information: `UTF-8`.
+2021-08-03 16:56:17,772 DEBUG [geoserver.ows] - Raw XML request: <p0:Execute xmlns:p0="http://www.opengis.net/wps/1.0.0" service="WPS" version="1.0.0"><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">Import_and_Export:Export_Table</p1:Identifier><p0:DataInputs><p0:Input><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">tableToExport</p1:Identifier><p0:Data><p0:LiteralData>BUILDINGS_SCREENS</p0:LiteralData></p0:Data></p0:Input><p0:Input><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">exportPath</p1:Identifier><p0:Data><p0:LiteralData>/home/nicolas/Downloads/buildings.shp</p0:LiteralData></p0:Data></p0:Input></p0:DataInputs><p0:ResponseForm><p0:RawDataOutput><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">result</p1:Identifier></p0:RawDataOutput></p0:ResponseForm></p0:Execute>\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00
+2021-08-03 16:56:17,773 INFO [geoserver.wps] - 
+Request: getServiceInfo
+2021-08-03 16:56:17,843 DEBUG [xsd.impl] - No schemaLocation found, using 'http://www.opengis.net/wps/1.0.0 jar:file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-xsd-wps-21.1.jar!/org/geotools/wps/wpsAll.xsd
+2021-08-03 16:56:17,847 DEBUG [xsd.impl] - Found override for http://www.opengis.net/wps/1.0.0: jar:file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-xsd-wps-21.1.jar!/org/geotools/wps/wpsAll.xsd ==> jar:file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-xsd-wps-21.1.jar!/org/geotools/wps/wpsAll.xsd
+2021-08-03 16:56:17,861 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,864 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,868 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,881 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,889 DEBUG [wps.resource] - Associating process with execution id: b593a339-8d9d-4066-9030-452f49d7c899
+2021-08-03 16:56:17,891 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,895 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,900 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Import_and_Export:Export_Table, executionId=b593a339-8d9d-4066-9030-452f49d7c899, asynchronous=false, phase=QUEUED, progress=0.0, userName=anonymous, creationTime=Tue Aug 03 16:56:17 CEST 2021, completionTime=null, lastUpdated=Tue Aug 03 16:56:17 CEST 2021, expirationDate=Tue Aug 03 16:56:17 CEST 2021, estimatedCompletion=null, nextPoll=Tue Aug 03 16:56:17 CEST 2021, task=null, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:56:17,900 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,905 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,912 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,918 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,923 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,927 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,930 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,936 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:17,940 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Import_and_Export:Export_Table, executionId=b593a339-8d9d-4066-9030-452f49d7c899, asynchronous=false, phase=RUNNING, progress=0.0, userName=anonymous, creationTime=Tue Aug 03 16:56:17 CEST 2021, completionTime=null, lastUpdated=Tue Aug 03 16:56:17 CEST 2021, expirationDate=Tue Aug 03 16:56:17 CEST 2021, estimatedCompletion=null, nextPoll=Tue Aug 03 16:56:17 CEST 2021, task=null, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:56:17,947 INFO [noise_planet.noisemodelling] - Start : Export File
+2021-08-03 16:56:17,947 INFO [noise_planet.noisemodelling] - inputs {tableToExport=BUILDINGS_SCREENS, exportPath=/home/nicolas/Downloads/buildings.shp}
+2021-08-03 16:56:35,194 INFO [noise_planet.noisemodelling] - The table BUILDINGS_SCREENS successfully exported to <b>/home/nicolas/Downloads/buildings.shp</b>  with the SRID : 2154
+2021-08-03 16:56:35,194 INFO [noise_planet.noisemodelling] - End : Export File
+2021-08-03 16:56:35,195 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Import_and_Export:Export_Table, executionId=b593a339-8d9d-4066-9030-452f49d7c899, asynchronous=false, phase=RUNNING, progress=99.0, userName=anonymous, creationTime=Tue Aug 03 16:56:17 CEST 2021, completionTime=null, lastUpdated=Tue Aug 03 16:56:35 CEST 2021, expirationDate=Tue Aug 03 16:56:17 CEST 2021, estimatedCompletion=Tue Aug 03 17:46:56 CEST 2021, nextPoll=Tue Aug 03 16:56:17 CEST 2021, task=Execution completed, preparing to write response, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:56:35,195 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:35,198 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:35,202 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:35,206 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:35,210 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:35,213 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:35,219 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Import_and_Export:Export_Table, executionId=b593a339-8d9d-4066-9030-452f49d7c899, asynchronous=false, phase=SUCCEEDED, progress=100.0, userName=anonymous, creationTime=Tue Aug 03 16:56:17 CEST 2021, completionTime=Tue Aug 03 16:56:35 CEST 2021, lastUpdated=Tue Aug 03 16:56:35 CEST 2021, expirationDate=Tue Aug 03 16:56:17 CEST 2021, estimatedCompletion=Tue Aug 03 17:46:56 CEST 2021, nextPoll=Tue Aug 03 16:56:17 CEST 2021, task=null, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:56:35,219 INFO [geoserver.wps] - 
+Request: execute
+    service = WPS
+    version = 1.0.0
+    baseUrl = http://localhost:9580/geoserver/
+    identifier:
+        value = Import_and_Export:Export_Table
+    dataInputs:
+        input[0]:
+            identifier = net.opengis.ows11.impl.CodeTypeImpl@502632a (value: tableToExport, codeSpace: null)
+            data = net.opengis.wps10.impl.DataTypeImpl@1a3bf94einput[0]:
+            identifier = net.opengis.ows11.impl.CodeTypeImpl@1107e24b (value: exportPath, codeSpace: null)
+            data = net.opengis.wps10.impl.DataTypeImpl@33db0d8c
+    responseForm:
+        rawDataOutput:
+            identifier = net.opengis.ows11.impl.CodeTypeImpl@255633ee (value: result, codeSpace: null)
+2021-08-03 16:56:35,223 DEBUG [geoserver.filters] - Compressing output for mimetype: text/plain
+2021-08-03 16:56:59,231 TRACE [ows.OWSHandlerMapping] - Mapped to HandlerExecutionChain with [org.geoserver.ows.Dispatcher@65105a83] and 1 interceptors
+2021-08-03 16:56:59,231 DEBUG [geoserver.requests] - First 4 bytes of XML doc are : 3C ('<') 70 ('p') 30 ('0') 3A (':')
+2021-08-03 16:56:59,231 DEBUG [geoserver.requests] - Charset detection phase 1. Inferred encoding: UTF-8
+2021-08-03 16:56:59,231 DEBUG [geoserver.requests] - Invalid(?) XML declaration: <p0:Ex.
+2021-08-03 16:56:59,231 DEBUG [geoserver.requests] - Charset detection phase 2. Charset in XML declaration is `null`.
+2021-08-03 16:56:59,231 DEBUG [geoserver.requests] - Trying to create reader basing on existing charset information: `UTF-8`.
+2021-08-03 16:56:59,231 DEBUG [geoserver.ows] - Raw XML request: <p0:Execute xmlns:p0="http://www.opengis.net/wps/1.0.0" service="WPS" version="1.0.0"><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">Database_Manager:Display_Database</p1:Identifier><p0:DataInputs><p0:Input><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">showColumns</p1:Identifier><p0:Data><p0:LiteralData>true</p0:LiteralData></p0:Data></p0:Input></p0:DataInputs><p0:ResponseForm><p0:RawDataOutput><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">result</p1:Identifier></p0:RawDataOutput></p0:ResponseForm></p0:Execute>\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00
+2021-08-03 16:56:59,232 INFO [geoserver.wps] - 
+Request: getServiceInfo
+2021-08-03 16:56:59,286 DEBUG [xsd.impl] - No schemaLocation found, using 'http://www.opengis.net/wps/1.0.0 jar:file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-xsd-wps-21.1.jar!/org/geotools/wps/wpsAll.xsd
+2021-08-03 16:56:59,291 DEBUG [xsd.impl] - Found override for http://www.opengis.net/wps/1.0.0: jar:file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-xsd-wps-21.1.jar!/org/geotools/wps/wpsAll.xsd ==> jar:file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-xsd-wps-21.1.jar!/org/geotools/wps/wpsAll.xsd
+2021-08-03 16:56:59,301 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,308 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,310 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,312 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,314 DEBUG [wps.resource] - Associating process with execution id: 624bdb80-efdd-40b1-9946-21238cc6eae2
+2021-08-03 16:56:59,314 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,318 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,327 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Database_Manager:Display_Database, executionId=624bdb80-efdd-40b1-9946-21238cc6eae2, asynchronous=false, phase=QUEUED, progress=0.0, userName=anonymous, creationTime=Tue Aug 03 16:56:59 CEST 2021, completionTime=null, lastUpdated=Tue Aug 03 16:56:59 CEST 2021, expirationDate=Tue Aug 03 16:56:59 CEST 2021, estimatedCompletion=null, nextPoll=Tue Aug 03 16:56:59 CEST 2021, task=null, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:56:59,327 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,331 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,335 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,340 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,346 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,348 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,357 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,362 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,368 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Database_Manager:Display_Database, executionId=624bdb80-efdd-40b1-9946-21238cc6eae2, asynchronous=false, phase=RUNNING, progress=0.0, userName=anonymous, creationTime=Tue Aug 03 16:56:59 CEST 2021, completionTime=null, lastUpdated=Tue Aug 03 16:56:59 CEST 2021, expirationDate=Tue Aug 03 16:56:59 CEST 2021, estimatedCompletion=null, nextPoll=Tue Aug 03 16:56:59 CEST 2021, task=null, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:56:59,372 INFO [noise_planet.noisemodelling] - Start : Display database
+2021-08-03 16:56:59,372 INFO [noise_planet.noisemodelling] - inputs {showColumns=true}
+2021-08-03 16:56:59,677 INFO [noise_planet.noisemodelling] - End : Display database
+2021-08-03 16:56:59,678 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Database_Manager:Display_Database, executionId=624bdb80-efdd-40b1-9946-21238cc6eae2, asynchronous=false, phase=RUNNING, progress=99.0, userName=anonymous, creationTime=Tue Aug 03 16:56:59 CEST 2021, completionTime=null, lastUpdated=Tue Aug 03 16:56:59 CEST 2021, expirationDate=Tue Aug 03 16:56:59 CEST 2021, estimatedCompletion=Tue Aug 03 16:57:00 CEST 2021, nextPoll=Tue Aug 03 16:56:59 CEST 2021, task=Execution completed, preparing to write response, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:56:59,678 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,680 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,682 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,687 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,694 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,697 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:56:59,704 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Database_Manager:Display_Database, executionId=624bdb80-efdd-40b1-9946-21238cc6eae2, asynchronous=false, phase=SUCCEEDED, progress=100.0, userName=anonymous, creationTime=Tue Aug 03 16:56:59 CEST 2021, completionTime=Tue Aug 03 16:56:59 CEST 2021, lastUpdated=Tue Aug 03 16:56:59 CEST 2021, expirationDate=Tue Aug 03 16:56:59 CEST 2021, estimatedCompletion=Tue Aug 03 16:57:00 CEST 2021, nextPoll=Tue Aug 03 16:56:59 CEST 2021, task=null, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:56:59,704 INFO [geoserver.wps] - 
+Request: execute
+    service = WPS
+    version = 1.0.0
+    baseUrl = http://localhost:9580/geoserver/
+    identifier:
+        value = Database_Manager:Display_Database
+    dataInputs:
+        input[0]:
+            identifier = net.opengis.ows11.impl.CodeTypeImpl@13bb81bf (value: showColumns, codeSpace: null)
+            data = net.opengis.wps10.impl.DataTypeImpl@518c41e7
+    responseForm:
+        rawDataOutput:
+            identifier = net.opengis.ows11.impl.CodeTypeImpl@68b0eb97 (value: result, codeSpace: null)
+2021-08-03 16:56:59,708 DEBUG [geoserver.filters] - Compressing output for mimetype: text/plain
+2021-08-03 16:57:16,742 TRACE [ows.OWSHandlerMapping] - Mapped to HandlerExecutionChain with [org.geoserver.ows.Dispatcher@65105a83] and 1 interceptors
+2021-08-03 16:57:16,745 DEBUG [geoserver.requests] - First 4 bytes of XML doc are : 3C ('<') 70 ('p') 30 ('0') 3A (':')
+2021-08-03 16:57:16,745 DEBUG [geoserver.requests] - Charset detection phase 1. Inferred encoding: UTF-8
+2021-08-03 16:57:16,745 DEBUG [geoserver.requests] - Invalid(?) XML declaration: <p0:Ex.
+2021-08-03 16:57:16,745 DEBUG [geoserver.requests] - Charset detection phase 2. Charset in XML declaration is `null`.
+2021-08-03 16:57:16,747 DEBUG [geoserver.requests] - Trying to create reader basing on existing charset information: `UTF-8`.
+2021-08-03 16:57:16,747 DEBUG [geoserver.ows] - Raw XML request: <p0:Execute xmlns:p0="http://www.opengis.net/wps/1.0.0" service="WPS" version="1.0.0"><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">Import_and_Export:Export_Table</p1:Identifier><p0:DataInputs><p0:Input><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">tableToExport</p1:Identifier><p0:Data><p0:LiteralData>RAIL_SECTIONS</p0:LiteralData></p0:Data></p0:Input><p0:Input><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">exportPath</p1:Identifier><p0:Data><p0:LiteralData>/home/nicolas/Downloads/rails.shp</p0:LiteralData></p0:Data></p0:Input></p0:DataInputs><p0:ResponseForm><p0:RawDataOutput><p1:Identifier xmlns:p1="http://www.opengis.net/ows/1.1">result</p1:Identifier></p0:RawDataOutput></p0:ResponseForm></p0:Execute>\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00
+2021-08-03 16:57:16,748 INFO [geoserver.wps] - 
+Request: getServiceInfo
+2021-08-03 16:57:16,792 DEBUG [xsd.impl] - No schemaLocation found, using 'http://www.opengis.net/wps/1.0.0 jar:file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-xsd-wps-21.1.jar!/org/geotools/wps/wpsAll.xsd
+2021-08-03 16:57:16,796 DEBUG [xsd.impl] - Found override for http://www.opengis.net/wps/1.0.0: jar:file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-xsd-wps-21.1.jar!/org/geotools/wps/wpsAll.xsd ==> jar:file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-xsd-wps-21.1.jar!/org/geotools/wps/wpsAll.xsd
+2021-08-03 16:57:16,804 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,807 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,809 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,812 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,816 DEBUG [wps.resource] - Associating process with execution id: e11edb4f-3ef8-4bda-ad6f-bd3330423378
+2021-08-03 16:57:16,817 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,821 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,825 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Import_and_Export:Export_Table, executionId=e11edb4f-3ef8-4bda-ad6f-bd3330423378, asynchronous=false, phase=QUEUED, progress=0.0, userName=anonymous, creationTime=Tue Aug 03 16:57:16 CEST 2021, completionTime=null, lastUpdated=Tue Aug 03 16:57:16 CEST 2021, expirationDate=Tue Aug 03 16:57:16 CEST 2021, estimatedCompletion=null, nextPoll=Tue Aug 03 16:57:16 CEST 2021, task=null, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:57:16,826 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,829 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,832 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,836 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,843 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,847 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,853 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,856 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:16,860 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Import_and_Export:Export_Table, executionId=e11edb4f-3ef8-4bda-ad6f-bd3330423378, asynchronous=false, phase=RUNNING, progress=0.0, userName=anonymous, creationTime=Tue Aug 03 16:57:16 CEST 2021, completionTime=null, lastUpdated=Tue Aug 03 16:57:16 CEST 2021, expirationDate=Tue Aug 03 16:57:16 CEST 2021, estimatedCompletion=null, nextPoll=Tue Aug 03 16:57:16 CEST 2021, task=null, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:57:16,862 INFO [noise_planet.noisemodelling] - Start : Export File
+2021-08-03 16:57:16,863 INFO [noise_planet.noisemodelling] - inputs {tableToExport=RAIL_SECTIONS, exportPath=/home/nicolas/Downloads/rails.shp}
+2021-08-03 16:57:17,007 INFO [noise_planet.noisemodelling] - The table RAIL_SECTIONS successfully exported to <b>/home/nicolas/Downloads/rails.shp</b>  with the SRID : 2154
+2021-08-03 16:57:17,007 INFO [noise_planet.noisemodelling] - End : Export File
+2021-08-03 16:57:17,008 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Import_and_Export:Export_Table, executionId=e11edb4f-3ef8-4bda-ad6f-bd3330423378, asynchronous=false, phase=RUNNING, progress=99.0, userName=anonymous, creationTime=Tue Aug 03 16:57:16 CEST 2021, completionTime=null, lastUpdated=Tue Aug 03 16:57:17 CEST 2021, expirationDate=Tue Aug 03 16:57:16 CEST 2021, estimatedCompletion=Tue Aug 03 16:57:17 CEST 2021, nextPoll=Tue Aug 03 16:57:16 CEST 2021, task=Execution completed, preparing to write response, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:57:17,008 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:17,012 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:17,018 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:17,022 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:17,025 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:17,029 DEBUG [script.wps] - Performing process lookup
+2021-08-03 16:57:17,045 DEBUG [geoserver.wps] - Saving status ExecutionStatus [processName=Import_and_Export:Export_Table, executionId=e11edb4f-3ef8-4bda-ad6f-bd3330423378, asynchronous=false, phase=SUCCEEDED, progress=100.0, userName=anonymous, creationTime=Tue Aug 03 16:57:16 CEST 2021, completionTime=Tue Aug 03 16:57:17 CEST 2021, lastUpdated=Tue Aug 03 16:57:17 CEST 2021, expirationDate=Tue Aug 03 16:57:16 CEST 2021, estimatedCompletion=Tue Aug 03 16:57:17 CEST 2021, nextPoll=Tue Aug 03 16:57:16 CEST 2021, task=null, exception=null, nodeId=137.121.74.14]
+2021-08-03 16:57:17,045 INFO [geoserver.wps] - 
+Request: execute
+    service = WPS
+    version = 1.0.0
+    baseUrl = http://localhost:9580/geoserver/
+    identifier:
+        value = Import_and_Export:Export_Table
+    dataInputs:
+        input[0]:
+            identifier = net.opengis.ows11.impl.CodeTypeImpl@45981720 (value: tableToExport, codeSpace: null)
+            data = net.opengis.wps10.impl.DataTypeImpl@37ccf96einput[0]:
+            identifier = net.opengis.ows11.impl.CodeTypeImpl@27c4b08e (value: exportPath, codeSpace: null)
+            data = net.opengis.wps10.impl.DataTypeImpl@533c0b6e
+    responseForm:
+        rawDataOutput:
+            identifier = net.opengis.ows11.impl.CodeTypeImpl@5698273e (value: result, codeSpace: null)
+2021-08-03 16:57:17,047 DEBUG [geoserver.filters] - Compressing output for mimetype: text/plain
+2021-08-03 17:00:06,091 TRACE [ows.OWSHandlerMapping] - Mapped to HandlerExecutionChain with [org.geoserver.ows.Dispatcher@65105a83] and 1 interceptors
+2021-08-03 17:00:06,092 INFO [geoserver.wps] - 
+Request: getServiceInfo
+2021-08-03 17:00:06,093 DEBUG [script.wps] - Performing process lookup
+2021-08-03 17:00:06,097 DEBUG [script.wps] - Performing process lookup
+2021-08-03 17:00:06,100 DEBUG [script.wps] - Performing process lookup
+2021-08-03 17:00:06,104 DEBUG [script.wps] - Performing process lookup
+2021-08-03 17:00:06,112 DEBUG [script.wps] - Performing process lookup
+2021-08-03 17:00:06,117 DEBUG [script.wps] - Performing process lookup
+2021-08-03 17:00:06,122 INFO [geoserver.wps] - 
+Request: describeProcess
+    service = WPS
+    version = 1.0.0
+    baseUrl = http://localhost:9580/geoserver/
+    identifier[0]:
+        value = geoclimate:s2_Receivers_Grid
+2021-08-03 17:00:06,151 DEBUG [data.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2021-08-03 17:00:06,151 DEBUG [data.util] - InterpolationConverterFactory can be applied from Strings to Interpolation only.
+2021-08-03 17:00:06,152 DEBUG [data.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2021-08-03 17:00:06,152 DEBUG [data.util] - InterpolationConverterFactory can be applied from Strings to Interpolation only.
+2021-08-03 17:00:06,172 DEBUG [geoserver.filters] - Compressing output for mimetype: application/xml
+2021-08-03 17:00:55,759 INFO [concurrent.ScheduledExecutorFactoryBean] - Shutting down ExecutorService 'wpstimerFactory'
+2021-08-03 17:00:55,760 INFO [concurrent.ScheduledExecutorFactoryBean] - Shutting down ExecutorService 'wcs111timerFactory'
+2021-08-03 17:00:55,761 INFO [georss.GeoRSSPoller] - destroy() invoked
+2021-08-03 17:00:55,761 INFO [geowebcache.GeoWebCacheDispatcher] - GeoWebCacheDispatcher.destroy() was invoked, shutting down.
+2021-08-03 17:00:55,763 INFO [diskquota.DiskQuotaMonitor] - Disk quota monitor shutting down...
+2021-08-03 17:00:55,763 INFO [diskquota.DiskQuotaMonitor] - Shutting down quota usage monitor...
+2021-08-03 17:00:55,763 INFO [diskquota.QuotaUpdatesMonitor] - Shutting down quota usage monitor...
+2021-08-03 17:00:55,768 INFO [diskquota.DiskQuotaMonitor] - Shutting down quota statistics gathering monitor...
+2021-08-03 17:00:55,768 INFO [diskquota.QueuedQuotaUpdatesConsumer] - Shutting down quota update background task due to InterruptedException
+2021-08-03 17:00:55,769 INFO [diskquota.QueuedUsageStatsConsumer] - Shutting down quota update background task due to interrupted exception
+2021-08-03 17:00:55,769 INFO [seed.SeederThreadPoolExecutor] - Initiating shut down for running and pending seed tasks...
+2021-08-03 17:00:55,769 INFO [seed.SeederThreadPoolExecutor] - Seeder thread pool executor shut down complete.
+2021-08-03 17:00:55,770 INFO [storage.DefaultStorageBroker] - Destroying StorageBroker
+2021-08-03 17:00:55,771 DEBUG [memory.MemoryBlobStore] - Reset cache
+2021-08-03 17:00:55,771 DEBUG [guava.GuavaCacheProvider] - Reset Cache internally
+2021-08-03 17:00:55,771 DEBUG [guava.GuavaCacheProvider] - Flushing cache
+2021-08-03 17:00:55,771 DEBUG [guava.GuavaCacheProvider] - Removing Layers
+2021-08-03 17:00:55,771 DEBUG [memory.MemoryBlobStore] - Destroy wrapped store
+2021-08-03 17:00:55,781 DEBUG [memory.MemoryBlobStore] - Waiting scheduled Tasks
+2021-08-03 17:00:55,782 DEBUG [guava.GuavaCacheProvider] - Reset Cache internally
+2021-08-03 17:00:55,782 DEBUG [guava.GuavaCacheProvider] - Flushing cache
+2021-08-03 17:00:55,782 DEBUG [guava.GuavaCacheProvider] - Removing Layers
+2021-08-03 17:00:55,782 DEBUG [memory.MemoryBlobStore] - Reset cache
+2021-08-03 17:00:55,783 DEBUG [guava.GuavaCacheProvider] - Cache is already reset
+2021-08-03 17:00:55,783 DEBUG [memory.MemoryBlobStore] - Destroy wrapped store
+2021-08-03 17:00:55,783 DEBUG [memory.MemoryBlobStore] - Waiting scheduled Tasks
+2021-08-03 17:00:55,787 INFO [support.DisposableBeanAdapter] - Invocation of destroy method failed on bean with name 'geoServerLoader': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'geoWebCacheExtensions': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2021-08-03 17:00:55,822 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,823 TRACE [util.factory] - ENTRY  (MathTransformFactory, MATH_TRANSFORM_FACTORY)
+2021-08-03 17:00:55,824 INFO [util.factory] - Implémentations des fabriques de catégorie MathTransformFactory:
+  org.geotools.referencing.operation.DefaultMathTransformFactory
+2021-08-03 17:00:55,824 TRACE [util.factory] - RETURN (MathTransformFactory, MATH_TRANSFORM_FACTORY): found implementation Optional.
+2021-08-03 17:00:55,825 TRACE [util.factory] - ENTRY  (DatumFactory, DATUM_FACTORY)
+2021-08-03 17:00:55,841 INFO [util.factory] - Implémentations des fabriques de catégorie DatumFactory:
+  org.geotools.referencing.factory.ReferencingObjectFactory
+  org.geotools.referencing.factory.DatumAliases
+2021-08-03 17:00:55,842 TRACE [util.factory] - RETURN (DatumFactory, DATUM_FACTORY): found implementation Optional.
+2021-08-03 17:00:55,842 TRACE [util.factory] - ENTRY  (CSFactory, CS_FACTORY)
+2021-08-03 17:00:55,843 INFO [util.factory] - Implémentations des fabriques de catégorie CSFactory:
+  org.geotools.referencing.factory.ReferencingObjectFactory
+2021-08-03 17:00:55,843 TRACE [util.factory] - RETURN (CSFactory, CS_FACTORY): found implementation Optional.
+2021-08-03 17:00:55,843 TRACE [util.factory] - ENTRY  (CRSFactory, CRS_FACTORY)
+2021-08-03 17:00:55,844 INFO [util.factory] - Implémentations des fabriques de catégorie CRSFactory:
+  org.geotools.referencing.factory.ReferencingObjectFactory
+2021-08-03 17:00:55,844 TRACE [util.factory] - RETURN (CRSFactory, CRS_FACTORY): found implementation Optional.
+2021-08-03 17:00:55,845 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,845 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,845 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,852 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,852 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,852 DEBUG [referencing.factory] - The EPSG factory org.geotools.referencing.factory.epsg.DefaultFactory will not timeout
+2021-08-03 17:00:55,873 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,874 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,874 DEBUG [referencing.factory] - The EPSG factory org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory will not timeout
+2021-08-03 17:00:55,874 INFO [util.factory] - Implémentations des fabriques de catégorie CoordinateOperationAuthorityFactory:
+  org.vfny.geoserver.crs.GeoserverWKTOperationFactory
+  org.geotools.referencing.factory.epsg.CoordinateOperationFactoryUsingWKT
+  org.geotools.referencing.factory.epsg.DefaultFactory
+  org.geotools.referencing.factory.epsg.LongitudeFirstFactory
+  org.geotools.referencing.factory.URN_AuthorityFactory
+  org.geotools.referencing.factory.HTTP_AuthorityFactory
+  org.geotools.referencing.factory.HTTP_URI_AuthorityFactory
+  org.geotools.referencing.factory.epsg.LongitudeFirstEpsgDecorator
+  org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory
+2021-08-03 17:00:55,874 INFO [referencing.factory] - user_projections/epsg_operations.properties was not found, using the default set of coordinate operation overrides (normally empty)
+2021-08-03 17:00:55,876 INFO [referencing.factory] - Utilise "file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gs-main-2.15.1.jar!/org/vfny/geoserver/crs/epsg_operations.properties" comme fabrique EPSG
+2021-08-03 17:00:55,881 TRACE [util.factory] - ENTRY  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY)
+2021-08-03 17:00:55,881 TRACE [util.factory] - CHECK  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): user provided a Class.
+2021-08-03 17:00:55,881 TRACE [util.factory] - CHECK  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): consider hint[last] ThreadedEpsgFactory.
+2021-08-03 17:00:55,885 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,885 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,888 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,888 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,888 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,888 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,889 DEBUG [referencing.factory] - The EPSG factory org.geotools.referencing.factory.epsg.DefaultFactory will not timeout
+2021-08-03 17:00:55,889 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,889 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,890 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,890 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,903 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,904 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,905 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,906 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,906 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,906 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,906 DEBUG [referencing.factory] - The EPSG factory org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory will not timeout
+2021-08-03 17:00:55,908 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,908 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,909 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,910 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,911 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,912 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:55,912 INFO [util.factory] - Implémentations des fabriques de catégorie CRSAuthorityFactory:
+  org.vfny.geoserver.crs.GeoserverCustomWKTFactory
+  org.vfny.geoserver.crs.GeoserverOverridingWKTFactory
+  org.geotools.referencing.factory.epsg.DefaultFactory
+  org.geotools.referencing.factory.epsg.FactoryUsingWKT
+  org.geotools.referencing.factory.epsg.LongitudeFirstFactory
+  org.geotools.referencing.factory.epsg.CartesianAuthorityFactory
+  org.geotools.referencing.factory.wms.AutoCRSFactory
+  org.geotools.referencing.factory.wms.WebCRSFactory
+  org.geotools.referencing.factory.URN_AuthorityFactory
+  org.geotools.referencing.factory.HTTP_AuthorityFactory
+  org.geotools.referencing.factory.HTTP_URI_AuthorityFactory
+  org.geotools.referencing.factory.epsg.LongitudeFirstEpsgDecorator
+  org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory
+  org.geotools.referencing.epsg.esri.UnnamedExtension
+  org.geotools.referencing.epsg.esri.EsriExtension
+  org.geotools.coverage.io.netcdf.crs.NetCDFCRSAuthorityFactory
+2021-08-03 17:00:55,912 DEBUG [epsg.hsql] - Building new data source for org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory
+2021-08-03 17:00:55,924 DEBUG [epsg.hsql] - Building backing store for org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory
+2021-08-03 17:00:55,932 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:55,932 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:56,403 INFO [referencing.factory] - Connecté à la base de données EPSG "jdbc:hsqldb:file:/tmp/GeoTools/Databases/HSQL/v8.6.0.1/EPSG;shutdown=true;readonly=true" sur "HSQL Database Engine".
+2021-08-03 17:00:56,419 TRACE [util.factory] - RETURN (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): found implementation Optional.
+2021-08-03 17:00:56,424 DEBUG [referencing.factory] - Fermeture de la connexion à la base de données EPSG.
+2021-08-03 17:00:56,424 DEBUG [epsg.hsql] - Building new data source for org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory
+2021-08-03 17:00:56,424 DEBUG [epsg.hsql] - Building backing store for org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory
+2021-08-03 17:00:56,424 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:56,424 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:56,506 INFO [referencing.factory] - Connecté à la base de données EPSG "jdbc:hsqldb:file:/tmp/GeoTools/Databases/HSQL/v8.6.0.1/EPSG;shutdown=true;readonly=true" sur "HSQL Database Engine".
+2021-08-03 17:00:56,516 TRACE [geotools.util] - Loaded resources for French from bundle "org.geotools.metadata.i18n".
+2021-08-03 17:00:56,520 TRACE [util.factory] - ENTRY  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY)
+2021-08-03 17:00:56,520 TRACE [util.factory] - CHECK  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): user provided a Class.
+2021-08-03 17:00:56,520 TRACE [util.factory] - CHECK  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): consider hint[last] AbstractEpsgMediator.
+2021-08-03 17:00:56,520 TRACE [util.factory] - THROW  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): could not find implementation.
+2021-08-03 17:00:56,525 INFO [referencing.factory] - Utilise "file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gs-main-2.15.1.jar!/org/vfny/geoserver/crs/override_epsg.properties" comme fabrique EPSG
+2021-08-03 17:00:56,528 TRACE [util.factory] - ENTRY  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY)
+2021-08-03 17:00:56,528 TRACE [util.factory] - CHECK  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): user provided a Class.
+2021-08-03 17:00:56,528 TRACE [util.factory] - CHECK  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): consider hint[last] ThreadedEpsgFactory.
+2021-08-03 17:00:56,528 TRACE [util.factory] - RETURN (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): found implementation Optional.
+2021-08-03 17:00:56,530 DEBUG [referencing.factory] - Fermeture de la connexion à la base de données EPSG.
+2021-08-03 17:00:56,533 DEBUG [epsg.hsql] - Building new data source for org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory
+2021-08-03 17:00:56,533 DEBUG [epsg.hsql] - Building backing store for org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory
+2021-08-03 17:00:56,534 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:56,534 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:56,591 INFO [referencing.factory] - Connecté à la base de données EPSG "jdbc:hsqldb:file:/tmp/GeoTools/Databases/HSQL/v8.6.0.1/EPSG;shutdown=true;readonly=true" sur "HSQL Database Engine".
+2021-08-03 17:00:56,596 INFO [referencing.factory] - Utilise "/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/data_dir/user_projections/epsg.properties" comme fabrique EPSG
+2021-08-03 17:00:56,597 DEBUG [referencing.factory] - Axis elements found in a wkt definition, the force longitude first axis order hint might not be respected:
+PROJCS["WGS84 / Simple Mercator", GEOGCS["WGS 84", DATUM["WGS_1984", SPHEROID["WGS_1984", 6378137.0, 298.257223563]], PRIMEM["Greenwich", 0.0], UNIT["degree", 0.017453292519943295]], PROJECTION["Mercator_1SP_Google"], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 0.0], PARAMETER["scale_factor", 1.0], PARAMETER["false_easting", 0.0], PARAMETER["false_northing", 0.0], UNIT["m", 1.0], AXIS["x", EAST], AXIS["y", NORTH], AUTHORITY["EPSG","54004"]]
+2021-08-03 17:00:56,598 INFO [referencing.factory] - Utilise "file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-epsg-extension-21.1.jar!/org/geotools/referencing/epsg/esri/unnamed.properties" comme fabrique EPSG
+2021-08-03 17:00:56,599 DEBUG [referencing.factory] - Axis elements found in a wkt definition, the force longitude first axis order hint might not be respected:
+PROJCS["Google Projection",GEOGCS["WGS 84",DATUM["World Geodetic System 1984",SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]],UNIT["degree", 0.017453292519943295],AXIS["Geodetic longitude", EAST],AXIS["Geodetic latitude", NORTH],AUTHORITY["EPSG","4326"]],PROJECTION["Popular Visualisation Pseudo Mercator", AUTHORITY["EPSG","1024"]],PARAMETER["semi_minor", 6378137.0],PARAMETER["latitude_of_origin", 0.0],PARAMETER["central_meridian", 0.0],PARAMETER["scale_factor", 1.0],PARAMETER["false_easting", 0.0],PARAMETER["false_northing", 0.0],UNIT["m", 1.0]]
+2021-08-03 17:00:56,600 INFO [referencing.factory] - Utilise "file:/home/nicolas/soft/NoiseModelling_3.4.3_geoclimate/NoiseModelling_3.4.3/webapps/geoserver/WEB-INF/lib/gt-epsg-extension-21.1.jar!/org/geotools/referencing/epsg/esri/esri.properties" comme fabrique ESRI
+2021-08-03 17:00:56,623 TRACE [util.factory] - ENTRY  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY)
+2021-08-03 17:00:56,623 TRACE [util.factory] - CHECK  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): user provided a Class.
+2021-08-03 17:00:56,623 TRACE [util.factory] - CHECK  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): consider hint[last] AbstractEpsgMediator.
+2021-08-03 17:00:56,623 TRACE [util.factory] - THROW  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): could not find implementation.
+2021-08-03 17:00:56,624 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:56,625 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:56,625 DEBUG [referencing.factory] - The EPSG factory org.geotools.referencing.factory.epsg.DefaultFactory will not timeout
+2021-08-03 17:00:56,625 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:56,625 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:56,625 DEBUG [referencing.factory] - The EPSG factory org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory will not timeout
+2021-08-03 17:00:56,626 INFO [util.factory] - Implémentations des fabriques de catégorie CSAuthorityFactory:
+  org.geotools.referencing.factory.epsg.DefaultFactory
+  org.geotools.referencing.factory.epsg.LongitudeFirstFactory
+  org.geotools.referencing.factory.URN_AuthorityFactory
+  org.geotools.referencing.factory.HTTP_AuthorityFactory
+  org.geotools.referencing.factory.HTTP_URI_AuthorityFactory
+  org.geotools.referencing.factory.epsg.LongitudeFirstEpsgDecorator
+  org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory
+2021-08-03 17:00:56,626 TRACE [util.factory] - ENTRY  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY)
+2021-08-03 17:00:56,626 TRACE [util.factory] - CHECK  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): user provided a Class.
+2021-08-03 17:00:56,626 TRACE [util.factory] - CHECK  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): consider hint[last] ThreadedEpsgFactory.
+2021-08-03 17:00:56,626 TRACE [util.factory] - RETURN (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): found implementation Optional.
+2021-08-03 17:00:56,628 DEBUG [referencing.factory] - Fermeture de la connexion à la base de données EPSG.
+2021-08-03 17:00:56,628 DEBUG [epsg.hsql] - Building new data source for org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory
+2021-08-03 17:00:56,628 DEBUG [epsg.hsql] - Building backing store for org.geotools.referencing.factory.epsg.hsql.ThreadedHsqlEpsgFactory
+2021-08-03 17:00:56,628 TRACE [util.factory] - ENTRY  (ReferencingFactoryContainer)
+2021-08-03 17:00:56,628 TRACE [util.factory] - RETURN (ReferencingFactoryContainer): found implementation Optional.
+2021-08-03 17:00:56,686 INFO [referencing.factory] - Connecté à la base de données EPSG "jdbc:hsqldb:file:/tmp/GeoTools/Databases/HSQL/v8.6.0.1/EPSG;shutdown=true;readonly=true" sur "HSQL Database Engine".
+2021-08-03 17:00:56,691 TRACE [util.factory] - ENTRY  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY)
+2021-08-03 17:00:56,691 TRACE [util.factory] - CHECK  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): user provided a Class.
+2021-08-03 17:00:56,692 TRACE [util.factory] - CHECK  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): consider hint[last] AbstractEpsgMediator.
+2021-08-03 17:00:56,692 TRACE [util.factory] - THROW  (CRSAuthorityFactory, CRS_AUTHORITY_FACTORY): could not find implementation.
+2021-08-03 17:00:56,692 INFO [geotools.util] - Weak collection cleaner stopped

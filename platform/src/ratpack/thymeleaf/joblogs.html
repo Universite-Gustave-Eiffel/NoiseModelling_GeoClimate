@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title data-react-helmet="true">NoiseModelling GeoClimate computation platform</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png"/>
+    <link rel="stylesheet" href="/css/pure-min.css"/>
+    <link rel="stylesheet" href="/css/platform.css"/>
+</head>
+<body>
+<div id="layout">
+    <div th:replace="menu :: menu"></div>
+    <div id="main" class="content">
+        <div class="header"><h1>Job logs</h1>
+            <h2>Job latest logs</h2>
+        </div>
+    </div>
+    <div class="code" th:each="row : ${rows}">
+        <pre class="console-text" th:text="${row}">blah blah</pre>
+    </div>
+</div>
+</body>
+</html>

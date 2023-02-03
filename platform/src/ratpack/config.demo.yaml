@@ -1,0 +1,21 @@
+auth:
+  clientId: "client id here"
+  clientSecret: "client secret here"
+admins:
+  - ""
+database:
+  user: postgresqluser
+  password: postgresqlpassword
+slurm:
+  host: "slurmcluster.com"
+  port: 22
+  user: "sshusername"
+  sshFilePassword: "sshfilepassword"
+  sshFile: "/home/user/.ssh/id_rsa"
+  serverKey: "BASE64Key"
+  serverKeyType: "ssh-rsa"
+  maxJobs: 12
+  serverTempFolder: "noisemodelling_jobs"
+
+
+

@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'maven-publish'
+    id 'application'
+}
+
+
+sourceCompatibility = 11
+
+compileJava {
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+}
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    maven { url 'https://oss.sonatype.org/content/repositories/releases/' }
+    mavenLocal()
+}
+
+dependencies {
+    implementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.14'
+    implementation group: 'org.osgi', name: 'org.osgi.service.jdbc', version: '1.0.0'
+    implementation (group: 'org.orbisgis', name: 'h2gis', version: '2.1.0-SNAPSHOT')
+    implementation (group: 'org.orbisgis', name: 'noisemodelling-jdbc', version: '4.0.0-SNAPSHOT')
+    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.22'
+    implementation group: 'org.apache.commons', name:'commons-text', version: '1.9'
+}
+
+application {
+    mainClass = 'org.noise_planet.nmcluster.Main'
+}
+jar {
+    manifest {
+        attributes('Class-Path': configurations.default.collect { it.getName() }.join(' '),
+                'Main-Class': 'org.noise_planet.nmcluster.Main')
+    }
+}

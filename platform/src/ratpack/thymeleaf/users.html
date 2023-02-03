@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title data-react-helmet="true">NoiseModelling GeoClimate computation platform</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png"/>
+    <link rel="stylesheet" href="/css/pure-min.css"/>
+    <link rel="stylesheet" href="/css/platform.css"/>
+</head>
+<body>
+<div id="layout">
+    <div th:replace="menu :: menu"></div>
+    <div id="main" class="content">
+        <div class="header"><h1>Manager users</h1>
+            <h2>Accept/Refuse job control requests</h2>
+            <table class="pure-table pure-table-bordered">
+                <thead>
+                <tr>
+                                <th>ooid</th>
+                                <th>mail</th>
+                                <th>action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="user : ${users}">
+                    <td th:text="${user.ooid}">1</td>
+                    <td th:text="${user.email}">user@domain.com</td>
+                    <td><a class="pure-button" th:href="|/manage/user/${user.ooid}/accept|">&CirclePlus;</a>
+                        <a class="pure-button" th:href="|/manage/user/${user.ooid}/refuse|">&CircleMinus;</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

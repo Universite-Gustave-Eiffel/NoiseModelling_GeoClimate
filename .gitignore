@@ -1,0 +1,15 @@
+.idea
+platform/jobs_complete/*
+platform/jobs_running/*
+!platform/jobs_complete/README.txt
+!platform/jobs_running/README.txt
+computation_core/dependencies/*.jar
+computation_core/libs
+*.mv.db
+*.trace.db
+### Gradle ###
+.gradle
+**/build/
+platform/src/ratpack/config.yaml
+out/
+application.log

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title data-react-helmet="true">NoiseModelling GeoClimate computation platform</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png"/>
+    <link rel="stylesheet" href="/css/pure-min.css"/>
+    <link rel="stylesheet" href="/css/platform.css"/>
+</head>
+<body>
+<div id="layout">
+    <div th:replace="menu :: menu"></div>
+    <div id="main" class="content">
+        <div class="header"><h1>Manage jobs</h1>
+            <h2>Processing job management</h2>
+            <form  class="pure-form pure-form-aligned" id="managejobform" action="/manage/manage_job" method="POST">
+                <table class="pure-table pure-table-bordered">
+                    <thead>
+                    <tr>
+                        <th>job ID</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Duration</th>
+                        <th>Progression</th>
+                        <th>Status</th>
+                        <th>Insee Department</th>
+                        <th>Conf ID</th>
+                        <th>Data</th>
+                        <th>Cancel</th>
+                        <th>Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="job : ${jobs}">
+                        <td th:text="${job.pk_job}">1</td>
+                        <td th:text="${job.startDate}">Monday, July 19, 2021 11:39 AM</td>
+                        <td th:text="${job.endDate}">-</td>
+                        <td th:text="${job.duration}">-</td>
+                        <td th:text="${job.progression}">15 %</td>
+                        <td th:text="${job.status}">Queued</td>
+                        <td th:text="${job.inseeDepartment}">15</td>
+                        <td th:text="${job.conf_id}">5</td>
+                        <td  th:utext="${job.result}">Result Logs</td>
+                        <td><input th:disabled="${!job.canManage}" th:value="${job.pk_job}" type="checkbox" value="-1" name="cancel"/></td>
+                        <td><input th:disabled="${!job.canManage}" th:value="${job.pk_job}"  type="checkbox" value="-1" name="delete"/></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="pure-controls"><button id="apply_button" type="submit" class="pure-button pure-button-primary">Apply</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
