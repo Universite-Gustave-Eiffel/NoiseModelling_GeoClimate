@@ -262,7 +262,7 @@ public class NoiseModellingRunner implements RunnableFuture<String> {
         inputs.put("databaseUser", configuration.getDataBaseConfig().user);
         inputs.put("databasePassword", configuration.getDataBaseConfig().password);
         inputs.put("fetchDistance", 1000);
-        inputs.put("inseeDepartment", configuration.getInseeDepartment());
+        inputs.put("inseeDepartment", configuration.getAreaToExtract());
         inputs.put("progressVisitor", progressVisitor);
         inputs.put("inputServer", "cloud");
 
@@ -521,7 +521,7 @@ public class NoiseModellingRunner implements RunnableFuture<String> {
         GroovyShell shell = new GroovyShell();
         Script process= shell.parse(new File("../script_groovy", "s42_Load_Noise_level.groovy"));
         Map<String, Object> inputs = new HashMap<>();
-        inputs.put("confId", configuration.getConfigurationId());
+        inputs.put("confId", configuration.getDistance());
         inputs.put("workingDirectory", configuration.getWorkingDirectory());
         inputs.put("progressVisitor", progressVisitor);
         return process.invokeMethod("exec", new Object[] {nmConnection, inputs});
@@ -531,7 +531,7 @@ public class NoiseModellingRunner implements RunnableFuture<String> {
         GroovyShell shell = new GroovyShell();
         Script process= shell.parse(new File("../script_groovy", "s5_Isosurface.groovy"));
         Map<String, Object> inputs = new HashMap<>();
-        inputs.put("confId", configuration.getConfigurationId());
+        inputs.put("confId", configuration.getDistance());
         inputs.put("workingDirectory", configuration.getWorkingDirectory());
         inputs.put("progressVisitor", progressVisitor);
         return process.invokeMethod("exec", new Object[] {nmConnection, inputs});
@@ -542,7 +542,7 @@ public class NoiseModellingRunner implements RunnableFuture<String> {
         GroovyShell shell = new GroovyShell();
         Script process= shell.parse(new File("../script_groovy", "s7_Export.groovy"));
         Map<String, Object> inputs = new HashMap<>();
-        inputs.put("confId", configuration.getConfigurationId());
+        inputs.put("confId", configuration.getDistance());
         inputs.put("workingDirectory", configuration.getWorkingDirectory());
         inputs.put("progressVisitor", progressVisitor);
         inputs.put("databaseUser", configuration.getDataBaseConfig().user);
@@ -1279,8 +1279,8 @@ public class NoiseModellingRunner implements RunnableFuture<String> {
 
     public static class Configuration {
         private String workingDirectory;
-        private int configurationId;
-        private String inseeDepartment;
+        private double distance;
+        private String areaToExtract;
         private int taskPrimaryKey;
         private DataBaseConfig dataBaseConfig;
         private ProgressVisitor progressVisitor = new EmptyProgressVisitor();
@@ -1291,11 +1291,11 @@ public class NoiseModellingRunner implements RunnableFuture<String> {
         private boolean computeOnCluster = true;
         private String notificationAccessToken = "";
 
-        public Configuration(int userPk, String workingDirectory, int configurationId, String inseeDepartment, int taskPrimaryKey
+        public Configuration(int userPk, String workingDirectory, double distance, String areaToExtract, int taskPrimaryKey
                 , DataBaseConfig dataBaseConfig, ProgressVisitor progressVisitor, String remoteJobFolder) {
             this.workingDirectory = workingDirectory;
-            this.configurationId = configurationId;
-            this.inseeDepartment = inseeDepartment;
+            this.distance = distance;
+            this.areaToExtract = areaToExtract;
             this.taskPrimaryKey = taskPrimaryKey;
             this.dataBaseConfig = dataBaseConfig;
             this.progressVisitor = progressVisitor;
@@ -1343,12 +1343,12 @@ public class NoiseModellingRunner implements RunnableFuture<String> {
             return workingDirectory;
         }
 
-        public int getConfigurationId() {
-            return configurationId;
+        public double getDistance() {
+            return distance;
         }
 
-        public String getInseeDepartment() {
-            return inseeDepartment;
+        public String getAreaToExtract() {
+            return areaToExtract;
         }
 
         public int getTaskPrimaryKey() {

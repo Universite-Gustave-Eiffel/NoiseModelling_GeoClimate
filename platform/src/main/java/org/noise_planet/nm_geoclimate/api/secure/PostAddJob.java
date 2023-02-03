@@ -45,6 +45,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Create new job
@@ -59,20 +61,26 @@ public class PostAddJob implements Handler {
             if (commonProfile.isPresent()) {
                 CommonProfile profile = commonProfile.get();
                 final Map<String, Object> model = Maps.newHashMap();
-                final String inseeDepartment = f.get("INSEE_DEPARTMENT");
-                final String confId = f.get("CONF_ID");
+                final String areaExtract = f.getOrDefault("AREA_EXTRACT", "");
+                double distance;
+                try {
+                    distance = Double.parseDouble(f.getOrDefault("DISTANCE", "0.0"));
+                } catch (NumberFormatException ex) {
+                    distance = 0.0;
+                }
                 final boolean computeOnCluster = Boolean.parseBoolean(f.getOrDefault(
                         "CLUSTER_COMPUTE", Boolean.FALSE.toString()));
-                if(inseeDepartment == null || inseeDepartment.equals("")) {
-                    model.put("message", "Missing required field inseeDepartment");
+                if(areaExtract.equals("")) {
+                    model.put("message", "Missing required field areaExtract");
                     ctx.render(Template.thymeleafTemplate(model, "add_job"));
                     return;
                 }
-                if(confId == null || confId.equals("")) {
-                    model.put("message", "Missing required field confId");
+                if(distance < 0) {
+                    model.put("message", "Distance field should be superior or equal to 0 meters");
                     ctx.render(Template.thymeleafTemplate(model, "add_job"));
                     return;
                 }
+                final double distanceParameter = distance;
                 model.put("profile", profile);
                 SecureEndpoint.getUserPk(ctx, profile).then(pkUser -> {
                     if(pkUser > -1) {
@@ -94,7 +102,7 @@ public class PostAddJob implements Handler {
                                     apiToken = apiTokenNode.asText();
                                 }
                                 long timeJob = System.currentTimeMillis();
-                                String jobFolder = "dep" + inseeDepartment + "_" + timeJob;
+                                String jobFolder = "dep" + "_" + timeJob;
                                 String remoteJobFolder;
                                 if(computeOnCluster) {
                                     remoteJobFolder = slurmConfigList.slurm.serverTempFolder + "/" + jobFolder;
@@ -103,12 +111,12 @@ public class PostAddJob implements Handler {
                                             File.separator + NoiseModellingRunner.RESULT_DIRECTORY_NAME;
                                 }
                                 PreparedStatement statement = connection.prepareStatement(
-                                        "INSERT INTO JOBS(REMOTE_JOB_FOLDER, LOCAL_JOB_FOLDER, CONF_ID, INSEE_DEPARTMENT, PK_USER, STATE)" +
+                                        "INSERT INTO JOBS(REMOTE_JOB_FOLDER, LOCAL_JOB_FOLDER, DISTANCE, EXTRACTION_AREA, PK_USER, STATE)" +
                                                 " VALUES (?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
                                 statement.setString(1, remoteJobFolder);
                                 statement.setString(2, jobFolder);
-                                statement.setInt(3, Integer.parseInt(confId));
-                                statement.setString(4, inseeDepartment);
+                                statement.setDouble(3, distanceParameter);
+                                statement.setString(4, areaExtract);
                                 statement.setInt(5, pkUser);
                                 statement.setString(6, NoiseModellingRunner.JOB_STATES.QUEUED.toString());
                                 statement.executeUpdate();
@@ -121,8 +129,8 @@ public class PostAddJob implements Handler {
                                     rootProgressVisitor.addPropertyChangeListener("PROGRESS" , new ProgressionTracker(dataSource, pk));
                                     NoiseModellingRunner.Configuration configuration = new NoiseModellingRunner.Configuration(
                                             pkUser,new File(NoiseModellingRunner.MAIN_JOBS_FOLDER+
-                                            File.separatorChar+jobFolder).getAbsolutePath(), Integer.parseInt(confId),
-                                            inseeDepartment, pk, dataBaseConfig , rootProgressVisitor, remoteJobFolder);
+                                            File.separatorChar+jobFolder).getAbsolutePath(), distanceParameter,
+                                            areaExtract, pk, dataBaseConfig , rootProgressVisitor, remoteJobFolder);
                                     configuration.setNotificationAccessToken(apiToken);
                                     configuration.setComputeOnCluster(computeOnCluster);
                                     if(computeOnCluster) {

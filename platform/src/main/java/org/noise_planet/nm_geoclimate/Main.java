@@ -52,7 +52,7 @@ import static ratpack.handling.Handlers.redirect;
  * @Author Nicolas Fortin, Université Gustave Eiffel
  */
 public class Main {
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 1;
     private static String dbUrl;
     private static String dataSourceClassName;
 
@@ -145,25 +145,17 @@ public class Main {
                     st.executeUpdate("CREATE TABLE USER_ASK_INVITATION(PK_INVITE SERIAL, USER_OID VARCHAR, MAIL VARCHAR)");
                     st.executeUpdate("CREATE TABLE IF NOT EXISTS JOBS(PK_JOB SERIAL,REMOTE_JOB_FOLDER VARCHAR NOT NULL," +
                             " BEGIN_DATE TIMESTAMP WITHOUT TIME ZONE, END_DATE TIMESTAMP WITHOUT TIME ZONE," +
-                            " PROGRESSION REAL DEFAULT 0, CONF_ID INTEGER, INSEE_DEPARTMENT VARCHAR," +
+                            " PROGRESSION REAL DEFAULT 0, DISTANCE REAL, EXTRACTION_AREA VARCHAR," +
                             " PK_USER INTEGER NOT NULL, STATE VARCHAR, LOCAL_JOB_FOLDER VARCHAR DEFAULT ''," +
                             " SLURM_JOB_ID BIGINT)");
 
                 }
                 // In the future check databaseVersion for database upgrades
                 if(databaseVersion != DATABASE_VERSION) {
-                    if(databaseVersion == 1) {
-                        databaseVersion = 2;
-                        st.execute("ALTER TABLE JOBS ADD COLUMN STATE VARCHAR");
-                    }
-                    if(databaseVersion == 2) {
-                        st.execute("ALTER TABLE JOBS ADD COLUMN SLURM_JOB_ID BIGINT");
-                        databaseVersion = 3;
-                    }
-                    if(databaseVersion == 3) {
-                        st.execute("ALTER TABLE JOBS ADD COLUMN LOCAL_JOB_FOLDER VARCHAR DEFAULT ''");
-                        databaseVersion = 4;
-                    }
+                    //                    if(databaseVersion == 1) {
+                    //                        databaseVersion = 2;
+                    //                        st.execute("ALTER TABLE JOBS ADD COLUMN STATE VARCHAR");
+                    //                    }
                     st.executeUpdate("UPDATE ATTRIBUTES SET DATABASE_VERSION = " + databaseVersion);
                 }
             }

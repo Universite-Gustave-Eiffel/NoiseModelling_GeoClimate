@@ -19,13 +19,15 @@
             <form class="pure-form pure-form-aligned" id="addjobform" action="/manage/do_add_job" method="POST">
                 <fieldset>
                     <legend>Add a new processing job to the queue</legend>
-                    <div class="pure-control-group"><label for="INSEE_DEPARTMENT">Code Department</label>
-                        <input type="text" placeholder="Code Department" id="INSEE_DEPARTMENT" name="INSEE_DEPARTMENT"/></div>
-                    <div class="pure-control-group"><label for="CONF_ID">Configuration ID</label>
-                        <input type="text" placeholder="Configuration ID" id="CONF_ID" name="CONF_ID" value="4"/>
+
+                    <div class="pure-control-group"><label for="AREA_EXTRACT">Computation area (lat long bounding box or nominatim ex: redon)</label>
+                        <input type="text" placeholder="Pont-de-Veyle" id="AREA_EXTRACT" name="AREA_EXTRACT" value="48.49749,5.25349,48.58082,5.33682"/>
+                    </div>
+                    <div class="pure-control-group"><label for="DISTANCE">Extraction radius of the computation area (meters)</label>
+                        <input type="text" placeholder="500" id="DISTANCE" name="DISTANCE" value="500"/>
                     </div>
                     <div class="pure-control-group"><label for="CLUSTER_COMPUTE">Compute on cluster</label>
-                        <input type="checkbox" value="true" id="CLUSTER_COMPUTE" name="CLUSTER_COMPUTE" checked="checked"/>
+                        <input type="checkbox" id="CLUSTER_COMPUTE" name="CLUSTER_COMPUTE"/>
                     </div>
                     <div class="pure-controls">
                         <button id="addButton" type="submit" class="pure-button pure-button-primary">Add
