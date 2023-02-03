@@ -39,7 +39,7 @@ Go into project root folder `cd ..`
 
 Run ./gradlew platform:run
 
-Edit the configuration file located in `platform/build/resources/main/config.yaml` with the auth credentials.
+Edit the configuration file located in `platform/build/resources/main/config.yaml` with the auth credentials. Add your own OAuth id into the admin list in order to be able to authorize users request.
 
 Run ./gradlew platform:run
 
