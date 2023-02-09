@@ -123,8 +123,8 @@ public class GetJobList implements Handler {
                                             row.put("duration", duration);
                                             row.put("status", rs.getString("STATE"));
                                             row.put("progression", f.format(rs.getDouble("PROGRESSION")));
-                                            row.put("inseeDepartment", rs.getString("INSEE_DEPARTMENT"));
-                                            row.put("conf_id", rs.getInt("CONF_ID"));
+                                            row.put("extraction_area", rs.getString("extraction_area"));
+                                            row.put("distance", rs.getDouble("distance"));
                                             String jobFolder = rs.getString("REMOTE_JOB_FOLDER");
                                             String localJobFolder = rs.getString("LOCAL_JOB_FOLDER");
                                             row.put("result", "<a href=\"/rjobs/"+localJobFolder+"\" target='_blank'>Result</a> <a href=\"/manage/job/"+pkJob+"/logs\">Logs</a>");

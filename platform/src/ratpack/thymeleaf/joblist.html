@@ -24,8 +24,8 @@
                         <th>Duration</th>
                         <th>Progression</th>
                         <th>Status</th>
-                        <th>Insee Department</th>
-                        <th>Conf ID</th>
+                        <th>Location</th>
+                        <th>Buffer Distance</th>
                         <th>Data</th>
                         <th>Cancel</th>
                         <th>Delete</th>
@@ -39,8 +39,8 @@
                         <td th:text="${job.duration}">-</td>
                         <td th:text="${job.progression}">15 %</td>
                         <td th:text="${job.status}">Queued</td>
-                        <td th:text="${job.inseeDepartment}">15</td>
-                        <td th:text="${job.conf_id}">5</td>
+                        <td th:text="${job.extraction_area}">15</td>
+                        <td th:text="${job.distance}">5</td>
                         <td  th:utext="${job.result}">Result Logs</td>
                         <td><input th:disabled="${!job.canManage}" th:value="${job.pk_job}" type="checkbox" value="-1" name="cancel"/></td>
                         <td><input th:disabled="${!job.canManage}" th:value="${job.pk_job}"  type="checkbox" value="-1" name="delete"/></td>

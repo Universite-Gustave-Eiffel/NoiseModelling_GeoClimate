@@ -22,11 +22,14 @@ compileJava {
     targetCompatibility = '11'
 }
 
-// Decomment to try compile external groovy script
+// Compile Groovy source before Java source
 sourceSets {
     main {
+        java {
+            srcDirs = [] // don't compile Java code twice
+        }
         groovy {
-            srcDirs=['../script_groovy']
+            srcDirs=['../script_groovy', 'src/main/java']
         }
     }
 }

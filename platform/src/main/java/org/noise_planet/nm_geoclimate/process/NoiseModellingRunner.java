@@ -25,7 +25,6 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 import com.jcraft.jsch.SftpException;
-import groovy.lang.GroovyShell;
 import groovy.lang.Script;
 import groovy.sql.Sql;
 import org.apache.commons.compress.utils.CountingInputStream;
@@ -42,6 +41,7 @@ import org.noise_planet.nmcluster.Main;
 import org.noise_planet.nmcluster.NoiseModellingInstance;
 import org.noise_planet.nm_geoclimate.config.DataBaseConfig;
 import org.noise_planet.nm_geoclimate.config.SlurmConfig;
+import org.noise_planet.wps_process.extract_zone;
 import org.osgi.service.jdbc.DataSourceFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -69,19 +69,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-import java.util.StringTokenizer;
-import java.util.TreeMap;
-import java.util.Vector;
+import java.util.*;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.RunnableFuture;
@@ -98,6 +86,7 @@ import java.util.stream.Collectors;
 public class NoiseModellingRunner implements RunnableFuture<String> {
 
     public static final String MAIN_JOBS_FOLDER = "jobs_running";
+    public static final int MAX_BOUNDINGBOX_SIZE = 20000;
     public static final String JOB_LOG_FILENAME = "joblog.txt";
     private static final int BATCH_MAX_SIZE = 100;
     public static final String H2GIS_DATABASE_NAME = "h2gisdb";
@@ -255,24 +244,9 @@ public class NoiseModellingRunner implements RunnableFuture<String> {
 
     public void importData(Connection nmConnection, ProgressVisitor progressVisitor) throws SQLException, IOException {
 
-        GroovyShell shell = new GroovyShell();
-        Script extractDepartment= shell.parse(new File("../script_groovy", "s1_Extract_Department.groovy"));
+        Map<String, Object> result = extract_zone.exec(nmConnection, configuration.getAreaToExtract(), configuration.distance, MAX_BOUNDINGBOX_SIZE);
 
-        Map<String, Object> inputs = new HashMap<>();
-        inputs.put("databaseUser", configuration.getDataBaseConfig().user);
-        inputs.put("databasePassword", configuration.getDataBaseConfig().password);
-        inputs.put("fetchDistance", 1000);
-        inputs.put("inseeDepartment", configuration.getAreaToExtract());
-        inputs.put("progressVisitor", progressVisitor);
-        inputs.put("inputServer", "cloud");
-
-        Object result = extractDepartment.invokeMethod("exec", new Object[] {nmConnection, inputs});
-
-        if(result instanceof String) {
-            try (OutputStreamWriter f = new OutputStreamWriter(new FileOutputStream(new File(configuration.getWorkingDirectory(), "import.html")), StandardCharsets.UTF_8)) {
-                f.write(result.toString());
-            }
-        }
+        logger.info("Done :" + result.get("outputZoneTable"));
     }
 
     public static Integer asInteger(Object v) {
@@ -515,41 +489,6 @@ public class NoiseModellingRunner implements RunnableFuture<String> {
         }
         mapper.writerWithDefaultPrettyPrinter().writeValue(new File(workingDirectory, "cluster_config.json"), rootDoc);
         return clusterConfiguration;
-    }
-
-    public Object LoadNoiselevel(Connection nmConnection, ProgressVisitor progressVisitor) throws SQLException, IOException {
-        GroovyShell shell = new GroovyShell();
-        Script process= shell.parse(new File("../script_groovy", "s42_Load_Noise_level.groovy"));
-        Map<String, Object> inputs = new HashMap<>();
-        inputs.put("confId", configuration.getDistance());
-        inputs.put("workingDirectory", configuration.getWorkingDirectory());
-        inputs.put("progressVisitor", progressVisitor);
-        return process.invokeMethod("exec", new Object[] {nmConnection, inputs});
-    }
-
-    public Object Isosurface(Connection nmConnection, ProgressVisitor progressVisitor) throws SQLException, IOException {
-        GroovyShell shell = new GroovyShell();
-        Script process= shell.parse(new File("../script_groovy", "s5_Isosurface.groovy"));
-        Map<String, Object> inputs = new HashMap<>();
-        inputs.put("confId", configuration.getDistance());
-        inputs.put("workingDirectory", configuration.getWorkingDirectory());
-        inputs.put("progressVisitor", progressVisitor);
-        return process.invokeMethod("exec", new Object[] {nmConnection, inputs});
-    }
-
-
-    public Object Export(Connection nmConnection, ProgressVisitor progressVisitor) throws SQLException, IOException {
-        GroovyShell shell = new GroovyShell();
-        Script process= shell.parse(new File("../script_groovy", "s7_Export.groovy"));
-        Map<String, Object> inputs = new HashMap<>();
-        inputs.put("confId", configuration.getDistance());
-        inputs.put("workingDirectory", configuration.getWorkingDirectory());
-        inputs.put("progressVisitor", progressVisitor);
-        inputs.put("databaseUser", configuration.getDataBaseConfig().user);
-        inputs.put("databasePassword", configuration.getDataBaseConfig().password);
-        inputs.put("batchSize", 1000);
-        inputs.put("inputServer", "cloud");
-        return process.invokeMethod("exec", new Object[] {nmConnection, inputs});
     }
 
     public static void pullFromSSH(ChannelSftp c, ProgressVisitor progressVisitor, String from, String to) throws IOException, SftpException {
@@ -1157,51 +1096,16 @@ public class NoiseModellingRunner implements RunnableFuture<String> {
                     return;
                 }
             }
-            NoiseModellingInstance.ClusterConfiguration clusterConfiguration;
             try (Connection nmConnection = nmDataSource.getConnection()) {
                 importData(nmConnection, subProg);
                 subProg.endStep();
-                int maxJobs = 1;
-                if(configuration.computeOnCluster) {
-                    maxJobs = configuration.slurmConfig.maxJobs;
-                }
-                clusterConfiguration = generateClusterConfig(nmConnection, subProg, maxJobs, configuration.workingDirectory);
-                subProg.endStep();
             }
+
             // Compact database
             try (Connection nmConnection = nmDataSource.getConnection()) {
                 nmConnection.createStatement().execute("SHUTDOWN COMPACT");
             } catch (JdbcSQLNonTransientConnectionException ex) {
                 // ignore
-            }
-            if(configuration.computeOnCluster) {
-                // limit the number of jobs according to the number of available Uueids
-                int numberOfNonEmptyJobs = 0;
-                for(NoiseModellingInstance.JobElement jobElement : clusterConfiguration.jobElementList) {
-                    if(!jobElement.railsUueid.isEmpty() || !jobElement.roadsUueid.isEmpty()) {
-                        numberOfNonEmptyJobs++;
-                    }
-                }
-                configuration.slurmConfig.maxJobs = numberOfNonEmptyJobs;
-                slurmInitAndStart(configuration.slurmConfig, subProg);
-            } else {
-                startNoiseModelling(subProg, clusterConfiguration);
-            }
-            try (Connection nmConnection = nmDataSource.getConnection()) {
-                exportCSV(nmConnection,
-                        new File(outDir.getAbsolutePath(), "POPULATION_EXPOSURE.csv").getAbsolutePath(), "POPULATION_EXPOSURE");
-                String resultDirectoryFullPath = new File(configuration.workingDirectory, RESULT_DIRECTORY_NAME).getAbsolutePath();
-                List<String> createdTables = mergeGeoJSON(nmConnection,
-                        resultDirectoryFullPath,
-                        "out_", "_");
-                createdTables.addAll(NoiseModellingInstance.mergeCBS(nmConnection,
-                        NoiseModellingInstance.CBS_GRID_SIZE, NoiseModellingInstance.CBS_MAIN_GRID_SIZE,
-                        subProg));
-                // Save merged final tables
-                exportTables(nmConnection, createdTables, outDir.getAbsolutePath(), 4326);
-                subProg.endStep();
-                logger.info(Export(nmConnection, subProg).toString());
-                subProg.endStep();
             }
             setJobState(JOB_STATES.COMPLETED);
         } catch (SQLException ex) {
@@ -1240,17 +1144,6 @@ public class NoiseModellingRunner implements RunnableFuture<String> {
         }
     }
 
-    public void sendNotification() throws IOException {
-//        URL apiUrl = new URL("https://api.pushbullet.com/v2/pushes");
-//        URLConnection con = url.openConnection();
-//        HttpURLConnection http = (HttpURLConnection)con;
-//        http.setRequestMethod("POST"); // PUT is another valid option
-//        http.setDoOutput(true);
-//        Map<String,String> arguments = new HashMap<>();
-//        arguments.put("username", "");
-//        arguments.put("password", ""); // This is a fake password obviously
-//        arguments.entrySet().stream().map(stringStringEntry -> URLEncoder.encode(stringStringEntry.getKey(), "UTF-8"))
-    }
     @Override
     public boolean cancel(boolean mayInterruptIfRunning) {
         configuration.progressVisitor.cancel();
